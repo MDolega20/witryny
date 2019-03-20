@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .row, label{
+            display: flex;
+            flex-direction: row;
+            /* padding: 5px; */
+            align-items: center;
+        }
+        .row{
+            padding: 5px;
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <div class="row">
+            <label>
+                <input type="checkbox" value="1.5" id="p1" name="pączek" onclick="select('p1');">
+                <p>pączki</p>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <input type="checkbox" value="1.5" id="p2" name="rurki" onclick="select('p2');">
+                <p>rurki z kremem</p>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <input type="checkbox" value="1.5" id="p3" name="ciastka francuzkie" onclick="select('p3');">
+                <p>ciastka francuzkie</p>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <input type="checkbox" value="1.5" id="p4" name="drozdzówki z makiem"  onclick="select('p4');">
+                <p>drozdzówki z makiem</p>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <input type="checkbox" value="1.5" id="p5" name="pierniki"  onclick="select('p5');">
+                <p>pierniki</p>
+            </label>
+        </div>
+        <div class="col">
+            <p>Ilość</p>
+            <input type="number" id="ilosc" value="10">
+            <button id="button">Zamów</button>
+        </div>
+        <div class="col">
+            <div id="wynik">
+                <p></p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let products = [];
+    function oblicz1(){
+        if (document.getElementById("p1").checked == true){
+            let produkt1 = {
+                cena: document.getElementById("p1").value,
+                nazwa: document.getElementById("p1").name
+            }
+            products.push(produkt1);
+        }
+        if (document.getElementById("p2").checked == true){
+            let produkt1 = {
+                cena: document.getElementById("p2").value,
+                nazwa: document.getElementById("p2").name
+            }
+            products.push(produkt1);
+        }
+        if (document.getElementById("p3").checked == true){
+            let produkt1 = {
+                cena: document.getElementById("p3").value,
+                nazwa: document.getElementById("p3").name
+            }
+            products.push(produkt1);
+        }
+        if (document.getElementById("p4").checked == true){
+            let produkt1 = {
+                cena: document.getElementById("p4").value,
+                nazwa: document.getElementById("p4").name
+            }
+            products.push(produkt1);
+        }
+        if (document.getElementById("p5").checked == true){
+            let produkt1 = {
+                cena: document.getElementById("p5").value,
+                nazwa: document.getElementById("p5").name
+            }
+            products.push(produkt1);
+        }
+
+        let ilosc = document.getElementById("ilosc").value;
+
+        let suma = 0;
+
+        let container = document.createElement("p");
+        products.forEach(element => {
+            let x = document.createElement("p");
+            suma += (parseFloat(element.cena) * parseFloat(ilosc));
+            x.innerText = element.nazwa + " " + ilosc + " x " + element.cena + " = " + (parseFloat(ilosc) * parseFloat(element.cena));
+            container.appendChild(x);
+            // document.getElementById("wynik").appendChild(x);
+        });
+
+        document.getElementById("wynik").innerHTML = "";
+        document.getElementById("wynik").appendChild(container);
+        let wuma = document.createElement("p");
+        wuma.innerText = "Suma: " + suma;
+        document.getElementById("wynik").appendChild(wuma);
+    }
+    document.getElementById("button").addEventListener("click", oblicz1, false);
+
+</script>
+</html>

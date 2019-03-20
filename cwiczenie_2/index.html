@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #frame{
+            width: 350px;
+            height: 300px;
+        }
+        #img_frame{
+            /* width: 310px;
+            height: 260px; */
+            padding: 10px;
+            /* border-bottom: 2px red solid;
+            border-right: 2px green solid; */
+        }
+        #img_frame img{
+            width: 300px;
+            height: 250px;
+        }
+        .controlls{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 10px;
+        }
+        .controlls input{
+            margin-bottom: 10px;
+            height: 20px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div id="img_frame">
+            <img src="./obr1.png" alt="obrazek">
+        </div>
+    </div>
+    <div class="controlls">
+        <input type="number" id="p1"> 
+        <input type="number" id="p2">
+        <button id="button">Oblicz</button>
+    </div>
+    <div id="result">
+        <p></p>
+    </div>
+</body>
+<script>
+    function oblicz(){
+        let element = document.createElement("p");
+        element.innerText = document.getElementById("p1").value * document.getElementById("p2").value;
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("result").appendChild(element);
+    }
+    document.getElementById("button").addEventListener("click", oblicz, false);
+</script>
+</html>

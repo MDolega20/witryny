@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Temp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <section>
+        <button id="download" >Pobierz</button>
+        <div>
+            <input type="number" id="number_of_loops_i">
+        </div>
+        <div>
+            <h1 id="number_of_loops"></h1>
+        </div>
+    </section>
+    
+</body>
+<script>
+    function down(){
+        let number_of_loops = document.getElementById("number_of_loops_i").value;
+        if (number_of_loops === null || number_of_loops === "" || number_of_loops <= 0) {
+            alert("Wpisz prawidłową liczbę");
+        } else {
+            console.log("Liczba jest prawidłowa");
+            let x;
+            for (x = 0; x <= number_of_loops; x++) {
+                fetch("https://mdol.pl/documents/Polityka_prywatno%C5%9Bci.html")
+                    .then(resp => {
+                        console.log(resp);
+                    });
+                document.getElementById("number_of_loops").innerHTML = x + "/" + number_of_loops;
+            }
+        }
+        
+    }
+
+    document.getElementById("download").addEventListener("click", () => down(), false);
+</script>
+</html>

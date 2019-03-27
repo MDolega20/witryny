@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gnerator liczb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            width: 100%;
+            margin: 0 auto;
+        }
+        header{
+            text-align: center;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        main, section{
+            display: flex;
+            flex-direction: column;
+        }
+        #results{
+            width: calc(100% - 20px);
+            padding: 10px;
+        }
+        #results > div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        #result{
+            text-align: center;
+            font-weight: 600;
+            font-size: 20vh;
+            line-height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Generator liczby</h1></header>
+    <main>
+        <section id="results">
+            <h1 id="result"></h1>
+        </section>
+    </main>
+    <footer><p>Made by MDol</p></footer>
+</body>
+<script>
+    function gen(){
+        let wylosowana = null;
+        let random_1 = Math.random() * 100;
+        if(random_1 >= 25){
+            wylosowana = 1;
+        }else{
+            let random_2 = Math.random() * 10;
+            if(random_2 >= 5){
+                wylosowana = 2;
+            }else{
+                wylosowana = 3;
+            }
+        }
+        return wylosowana;
+    }
+    document.getElementById("result").innerHTML = gen();
+
+</script>
+</html>

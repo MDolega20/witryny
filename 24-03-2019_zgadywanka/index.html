@@ -114,9 +114,13 @@
             if (parseInt(liczba1) === random) {
                 // newSpan.innerHTML = "Brawo";
                 alert("Zgadłeś");
-                location.reload();
+                if(confirm("Czy chcesz grac dalej")){
+                    location.reload();
+                }else{
+                    location.replace("https://google.pl");
+                }
             } else {
-                newSpan.innerHTML = "Nie zgadłeś ;(  >>"+liczba1+"<<";
+                newSpan.innerHTML = "Nie zgadłeś ;(  "+liczba1+" "+(liczba1 > random ? ">" : "<")+" szukana";
                 szanse--;
                 if(szanse === 0){
                     gameOver();

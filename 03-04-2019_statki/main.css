@@ -25,12 +25,56 @@ main{
     flex-direction: column;
 }
 #game_container{
+    justify-content: center;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 160px 160px;
 }
 #game_container > div > div:nth-of-type(1){
-    padding: 10px;
+    padding: 0 5px;
 }
 #game_container > div > div:nth-of-type(1){
 
+}
+#player_info, #bot_info{
+    padding: 5px;
+}
+.board_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 5px;
+    width: calc(7 * 20px);
+}
+.board_row{
+    display: flex;
+    flex-direction: row;
+}
+.board_cell{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.player_controlls_row{
+    display: flex;
+    flex-direction: row;
+}
+.player_controlls_row label{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+}
+.player_controlls_row label{
+    width: 100px;
+}
+.player_controlls_row input{
+    width: 100%;
+}
+.player_controlls_row button{
+    display: block;
+    width: 100%;
 }

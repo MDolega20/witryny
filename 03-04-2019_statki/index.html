@@ -12,24 +12,36 @@
     <header><h1>Gra w statki</h1></header>
     <main>
         <section id="main_controlls">
-            <button>Start</button>
-            <button>[Re]start</button>
+            <button onclick="resetAll();">Start</button>
+            <button onclick="resetAll();">[Re]start</button>
         </section>
         <section id="game_container">
             <div id="bot_container">
                 <div id="bot_name"><h2>Przeciwnik</h2></div>
-                <div id="bot_board"><p>Plansza1</p></div>
-                <div id="bot_info"><p>LIczba statków</p></div>
+                <div id="bot_board"></div>
+                <div id="bot_info"></div>
+                <div id="game_loggs"></div>
             </div>
             <div id="player_container">
                 <div id="player_name"><h2>Gracz</h2></div>
-                <div id="player_board"><p>Plansza2</p></div>
-                <div id="player_info"><p>LIczba statków</p></div>
-                <div id="player_controlls"></div>
+                <div id="player_board"></div>
+                <div id="player_info"></div>
+                <div id="player_controlls">
+                    <div class="player_controlls_row">
+                        <label>
+                            <input type="number" id="i_x" placeholder="2">
+                            <p>Współ X</p>
+                        </label>
+                        <label>
+                            <input type="number" id="i_y" placeholder="4">
+                            <p>Współ Y</p>
+                        </label>
+                    </div>
+                    <div class="player_controlls_row">
+                        <button id="shoot">Strzał</button>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section id="game_loggs">
-            <div id="game_loggs_title"><h2>loggs</h2></div>
         </section>
     </main>
 </body>

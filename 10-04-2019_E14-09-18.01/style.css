@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+a{
+    color: yellow;
+}
+header, footer, #right{
+    background-color: #5957a1;
+}
+#left{
+    background-color: #bbadcd;
+}
+header, footer, #right{
+    text-align: center;
+}
+body{
+    font-family: Arial;
+    color: #FFF;
+}
+header{
+    padding: 10px;
+    height: 70px;
+}
+footer{
+    height: 50px;
+}
+main > div{
+    height: 450px;
+}
+#right hr{
+    border-color: yellow;
+}
+#right ul{
+    list-style: square;
+}
+#tabela td, #tabela th{
+    border: 1px #000 solid;
+}
+#left{
+    overflow: scroll;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#tabela .second-column{
+    width: 405px;
+}

@@ -21,7 +21,7 @@
                             INSERT INTO klasa (id, nazwa) VALUES ('5', '3a');
                         </td>
                         <td class="second-column">
-                            <img src="" alt="nazwa-pliku">
+                            <img src="images/image-1.jpg" alt="nazwa-pliku">
                         </td>
                     </tr>
                     <tr>
@@ -29,7 +29,7 @@
                             SELECT nazwa, (SELECT AVG(`Srednia_ocen`) FROM uczen WHERE id_klasy=klasa.id) FROM klasa;
                         </td>
                         <td class="second-column">
-                            <img src="" alt="nazwa-pliku">
+                            <img src="images/image-2.jpg" alt="nazwa-pliku">
                         </td>
                     </tr>
                     <tr>
@@ -37,15 +37,15 @@
                             CREATE USER Dyrektor@localhost IDENTIFIED BY 'dyr_123';
                         </td>
                         <td class="second-column">
-                            <img src="" alt="nazwa-pliku">
+                            <img src="images/image-3.jpg" alt="nazwa-pliku">
                         </td>
                     </tr>
                     <tr>
                         <td class="first-column">
-                            tresc zapytania
+                            GRANT ALL PRIVILEGES ON szkola TO Dyrektor@localhost;
                         </td>
                         <td class="second-column">
-                            <img src="" alt="nazwa-pliku">
+                            <img src="images/image-4.jpg" alt="nazwa-pliku">
                         </td>
                     </tr>
                 </table>

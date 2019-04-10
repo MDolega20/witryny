@@ -18,7 +18,7 @@
                     </tr>
                     <tr>
                         <td class="first-column">
-                            tresc zapytania
+                            INSERT INTO klasa (id, nazwa) VALUES ('5', '3a');
                         </td>
                         <td class="second-column">
                             <img src="" alt="nazwa-pliku">
@@ -26,7 +26,7 @@
                     </tr>
                     <tr>
                         <td class="first-column">
-                            tresc zapytania
+                            SELECT nazwa, (SELECT AVG(`Srednia_ocen`) FROM uczen WHERE id_klasy=klasa.id) FROM klasa;
                         </td>
                         <td class="second-column">
                             <img src="" alt="nazwa-pliku">
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td class="first-column">
-                            tresc zapytania
+                            CREATE USER Dyrektor@localhost IDENTIFIED BY 'dyr_123';
                         </td>
                         <td class="second-column">
                             <img src="" alt="nazwa-pliku">

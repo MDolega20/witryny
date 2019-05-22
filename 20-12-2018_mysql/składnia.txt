@@ -1,0 +1,113 @@
+SELECT imie, MIN(rok_urodzenia), imie, nazwisko  FROM członkowie;
+SELECT MAX( Rok_premiery ) AS najnowszy FROM albumy;
+SELECT tytul, rok_premiery FROM albumy WHERE tytul LIKE '*rn*';
+SELECT COUNT( id_utworu ) AS Liczba_utworów FROM utwory;
+SELECT COUNT( id_albumu ) AS ile FROM albumy WHERE zespol='Iron Maiden';
+SELECT ROUND(AVG( czas_trwania ), 2) FROM utwory
+SELECT SUM(długość_utwory) FROM utwory;
+SELECT ROUND(AVG( 2018 - rok_urodzenia )) FROM członkowie;
+
+UPDATE członkowie SET rok_urodzenia=1890 WHERE id_członka=10;
+UPDATE członkowie SET imie='Ben' WHERE imie='Benjamin';
+UPDATE członkowie SET rok_urodzenia=1750 WHERE zespol='Lady Punk';
+
+DELETE FROM członkowie;
+DELETE FROM członkowie WHERE id_członka=11;
+
+SELECT u.tytul, rok_premiery FROM utwory AS u, albumy WHERE u.album=albumy.id_albumu;
+
+SELECT imie, nazwisko, nazwa 
+FROM członkowie, instrumenty, umiejetnosci 
+WHERE umiejetnosci.instrument=instrumenty.identyfikator 
+AND umiejetnosci.czlonek=czlonkowie.id_członka;
+
+SELECT imie, nazwisko, nazwa
+FROM czlonkowie, instrumenty, umiejetnosci, albumy
+WHERE czlonkowie.zespol=albumy.zespol
+AND umiejetnosci.czlonek=czlonkowie.id_członka
+AND albumy.tytul='Fear Of The Dark';
+
+SELECT imie, nazwisko, 2018-rok_urodzenia AS wiek
+FROM czlonkowie, umiejetnosci, instrumenty
+WHERE umiejetnosci.czlonek=czlonkowie.id_członka
+AND umiejetnosci.instrument-instrumenty.identyfikator
+AND instrumenty.nazwa='wokal'
+AND czlonkowie.zespol='Trivium';
+
+SELECT * FROM Czlonkowie INNER JOIN  Zespoly
+ON Czlonkowie.Zespol-Zespoly.Identyfikator;
+
+SELECT * FROM Albumy LEFT JOIN Utwory 
+ON Albumy.ID_albumu=Utwory.Album;
+
+SELECT * FROM Albumy RIGHT JOIN Utwory 
+ON Albumy.ID_albumu=Utwory.Album;
+
+SELECT * FROM Albumy LEFT JOIN Utwory
+ON Albumy.ID_albumu=Utwory.Album
+WHERE Album IS NULL;
+
+DROP TABLE Pracownicy;
+
+INSERT INTO `Pracownicy`(column_1,column_2,...) VALUES (value_1,value_2,...);
+
+CREATE TABLE Pracownicy (
+    id AUTOINCREMENT NOT NULL PRIMARY KEY,
+    imie VARCHAR(50) NOT NULL,
+    nazwisko VARCHAR(50) NOT NULL,
+    nr_telefonu VARCHAR(15),
+    plec CHAR(1)
+)
+
+CREATE TABLE Faktury (
+    nr_faktury AUTOINCREMENT PRIMARY KEY,
+    nr_klienta INTEGER NOT NULL,
+    kwota NUMBER NOT NULL,
+    data_wystawienia DATETIME,
+    czy_opłacona BIT,
+    komentarz LONGTEXT
+)
+
+
+
+
+
+DML:
+    SELECT - wydobywanie danych z tabel,
+    UPDATE - uaktualnianie danych w tabeli,
+    DELETE - kasowanie danych w tabeli,
+    INSERT - wprowadzanie danych do tabeli.
+    
+Klauzule:
+    WHERE - gdzie
+    LIKE - takie jak
+    AND - oraz
+    OR - albo
+    NOT - nie
+    FROM - z 
+    AS - jako
+
+Funkcje agregujące:
+    MIN() - minimalna
+    MAX() - maxymalna
+    COUNT() - sumuje liczbę wierszy
+    AVG() - średnia
+    SUM() - sumuje wartości w obrębie kolumny
+    ROUND() - zaokrąglenie
+
+Ograniczenia:
+    NOT NULL - nie może być puste
+
+    -- SELECT 
+    -- UPDATE
+    -- DELETE
+    -- INSERT INTO
+    -- CREATE DATABASE
+    -- ALTER DATABASE
+    -- CREATE TABLE
+    -- ALTER TABLE
+    -- DROP TABLE
+    -- FROM
+    -- GROUP BY
+    -- ORDER BY
+    -- HAVING

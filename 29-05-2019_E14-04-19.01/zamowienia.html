@@ -46,7 +46,47 @@
                     <p>Podaj wagę w dekagramach</p>
                     <input type="number" min=0 id="weight">
                 </label>
+                <hr/>
+                <div id="delivery">
+                    <label>
+                        <input type="radio" name="delivery" value="1" onchange="checkInternational(true);">
+                        <p>odbiór osobisty</p>
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="2" onchange="checkInternational(false);">
+                        <p>kurier</p>
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="3" onchange="checkInternational(false);">
+                        <p>poczta</p>
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="4" onchange="checkInternational(false);">
+                        <p>paczkomat</p>
+                    </label>
+                </div>
+                <hr />
+                <div id="international">
+                    <label>
+                        <input type="checkbox" name="" id="internationalValue" value="5">
+                        <p>Dostawa zagraniczna</p>
+                    </label>
+                </div>
                 <button onclick="oblicz();">Zamów</button>
+                <div id="result">
+                    <div class="row">
+                        <p>cena kawy</p>
+                        <p id="p1"></p>
+                    </div>
+                    <div class="row">
+                        <p>+dostawa</p>
+                        <p id="p2"></p>
+                    </div>
+                    <div class="row">
+                        <p>razem</p>
+                        <p id="p3"></p>
+                    </div>
+                </div>
                 <p id="result"></p>
             </div>
         </section>
@@ -56,33 +96,91 @@
     </footer>
 </body>
 <script>
+    let interAnal = true;
     function oblicz(){
         let coffee = Number(document.getElementById("coffeeId").value);
         weight = document.getElementById("weight").value,
+        deliveryMethods = document.getElementsByName("delivery"),
+        deliveryInternational = document.getElementById("internationalValue").checked,
+        deliveryPrice = null,
+        productPrice = null,
+        deliveryMethod = null,
+        pricePerKg = null,
         price = null,
-        result = document.getElementById("result");
-
-        alert(coffee + " " + typeof(coffee));
+        p1 = document.getElementById("p1"),
+        p2 = document.getElementById("p2"),
+        p3 = document.getElementById("p3");
 
         switch (coffee) {
             case 1:
-            price = weight * 5;
+            pricePerKg = 5;
                 break;
             case 2:
-            price = weight * 7;
+            pricePerKg = 7;
                 break;
             case 3:
-            price = weight * 6;
+            pricePerKg = 6;
+                break;
+            default:
+            pricePerKg = 0;
+                break;
+        }
+        productPrice = pricePerKg * weight;
+
+        for (let i = 0, length = deliveryMethods.length; i < length; i++) {
+            if (deliveryMethods[i].checked) {
+                deliveryMethod = Number(deliveryMethods[i].value);
+                break; 
+            } 
+        }
+
+        switch (deliveryMethod) {
+            case 1:
+                deliveryPrice = 0;
+                break;
+            case 2:
+                deliveryPrice = 30 + (weight * 1);
+                break;
+            case 3:
+                deliveryPrice = 20 + (weight * 2);
+                break;
+            case 4:
+                switch (true) {
+                    case weight <= 10:
+                        deliveryPrice = 7;
+                        break;
+                    case (11 < weight) && (weight <= 30):
+                        deliveryPrice = 12;
+                        break;
+                    case (weight > 30):
+                        deliveryPrice = 16;
+                        break;
+                    case (weight > 50):
+                        deliveryPrice = 0;
+                        alert("Dostawa powyżej 50 sztuk przez paczkomat niedostepna");
+                        break;
+                    default:
+                        break;
+                }
                 break;
         
             default:
-            price = 0;
                 break;
         }
+        if(deliveryInternational){
+            deliveryPrice += 80;
+        }
 
-        result.innerText = `Koszt zamówienia wynosi ` + price + ` zł`;
-
-
+        p1.innerText = productPrice + "zł";
+        p2.innerText = deliveryPrice + "zł" + (deliveryInternational ? " + [dostawa za granice - 80pln]" : "");
+        p3.innerText = (deliveryPrice + productPrice) + "zł";
+    }
+    function checkInternational(bool){
+        if(!bool){
+            document.getElementById("internationalValue").disabled = false;
+        }else{
+            document.getElementById("internationalValue").disabled = true;
+        }
     }
 
 </script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hurtownia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styl4.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <div id="logo">
+                <img src="https://naklejkarnia.com/wp-content/uploads/2016/07/I-love-coffee.png" alt="hurtownia">
+            </div>
+            <nav>
+                <a href="/index.html">Strona główna</a>
+                <a href="/zamowienia.html">Zamówienia</a>
+                <a href="/blog.html">Blog o kawie</a>
+                <a href="http://gatunki-kawy.pl">Odwiedź także</a>
+            </nav>
+        </section>
+        <section id="banner">
+            <h1>Hurtownia kawy</h1>
+        </section>
+    </header>
+    <main>
+        <section>
+            <h2>Oferta</h2>
+            <ol>
+                <li>Kawa palona Arabica</li>
+                    <li>Kawa palona Robusta</li>
+                    <li>Kawa bezkofeinowa</li>
+                    <li>Kawa zielona</li>
+            </ol>
+        </section>
+        <section>
+            <div id="form">
+                <label>
+                    <p>Podaj numer kawy:</p>
+                    <input type="number" min=1 max=4 id="coffeeId">
+                </label>
+                <label>
+                    <p>Podaj wagę w dekagramach</p>
+                    <input type="number" min=0 id="weight">
+                </label>
+                <button onclick="oblicz();">Zamów</button>
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Stronę przygotował: <b>6666666666666666666</b></p>
+    </footer>
+</body>
+<script>
+    function oblicz(){
+        let coffee = Number(document.getElementById("coffeeId").value);
+        weight = document.getElementById("weight").value,
+        price = null,
+        result = document.getElementById("result");
+
+        alert(coffee + " " + typeof(coffee));
+
+        switch (coffee) {
+            case 1:
+            price = weight * 5;
+                break;
+            case 2:
+            price = weight * 7;
+                break;
+            case 3:
+            price = weight * 6;
+                break;
+        
+            default:
+            price = 0;
+                break;
+        }
+
+        result.innerText = `Koszt zamówienia wynosi ` + price + ` zł`;
+
+
+    }
+
+</script>
+
+</html>

@@ -106,7 +106,7 @@
         productPrice = null,
         deliveryMethod = null,
         pricePerKg = null,
-        price = null,
+        error = false,
         p1 = document.getElementById("p1"),
         p2 = document.getElementById("p2"),
         p3 = document.getElementById("p3");
@@ -152,12 +152,13 @@
                     case (11 < weight) && (weight <= 30):
                         deliveryPrice = 12;
                         break;
-                    case (weight > 30):
+                    case (50 >= weight) && (weight > 30):
                         deliveryPrice = 16;
                         break;
                     case (weight > 50):
                         deliveryPrice = 0;
                         alert("Dostawa powyżej 50 sztuk przez paczkomat niedostepna");
+                        error = true;
                         break;
                     default:
                         break;
@@ -171,9 +172,12 @@
             deliveryPrice += 80;
         }
 
-        p1.innerText = productPrice + "zł";
-        p2.innerText = deliveryPrice + "zł" + (deliveryInternational ? " + [dostawa za granice - 80pln]" : "");
-        p3.innerText = (deliveryPrice + productPrice) + "zł";
+if(!error){
+p1.innerText = productPrice + "zł";
+p2.innerText = deliveryPrice + "zł" + (deliveryInternational ? " + [dostawa za granice - 80pln]" : "");
+p3.innerText = (deliveryPrice + productPrice) + "zł";
+
+}
     }
     function checkInternational(bool){
         if(!bool){

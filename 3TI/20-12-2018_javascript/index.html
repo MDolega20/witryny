@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id='content'>
+            <input type="text" id='liczba1'>
+            <input type="text" id="liczba2">
+            <input type="text" placeholder="wynik" id="wynik">
+            <button onclick="dodaj()">Dodaj</button>
+            <button onclick="odejmij()">Odejmij</button>
+            <button onclick="pomnoz()">Pomnóż</button>
+            <button onclick="podziel()">POdziel</button>
+        </div>
+    </main>
+</body>
+<script>
+    var liczba1 = parseInt(document.getElementById('liczba1').value);
+    var liczba2 = parseInt(document.getElementById('liczba2').value);
+    var wynik;
+    
+    function dodaj(){
+        var liczba1 = parseInt(document.getElementById('liczba1').value);
+        var liczba2 = parseInt(document.getElementById('liczba2').value);
+        var wynik;
+        
+        wynik = liczba1 + liczba2;
+
+        document.getElementById('wynik').value = wynik;
+    }
+    function pomnoz(){
+        var liczba1 = parseInt(document.getElementById('liczba1').value);
+        var liczba2 = parseInt(document.getElementById('liczba2').value);
+        var wynik;
+        
+        wynik = liczba1 * liczba2;
+
+        document.getElementById('wynik').value = wynik;
+    }
+    function odejmij(){
+        var liczba1 = parseInt(document.getElementById('liczba1').value);
+        var liczba2 = parseInt(document.getElementById('liczba2').value);
+        var wynik;
+        
+        wynik = liczba1 - liczba2;
+
+        document.getElementById('wynik').value = wynik;
+    }
+    function podziel(){
+        var liczba1 = parseInt(document.getElementById('liczba1').value);
+        var liczba2 = parseInt(document.getElementById('liczba2').value);
+        var wynik;
+        if(liczba1 == 0 || liczba2 == 0){
+            alert('Nie można dzielić przez zero!');
+        }else{
+            wynik = liczba1 / liczba2;
+            document.getElementById('wynik').value = wynik;
+        }
+        
+    }
+</script>
+</html>

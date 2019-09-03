@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+    background-color: #fff;
+    height: 700px;
+    width: 700px;
+    margin: 0 auto;
+}
+header{
+    background-color: blue;
+    border-bottom: 2vh #fff solid;
+}
+header, main, footer, .content, .content2{
+    width: 100%;
+    float: left;
+}
+header h1{
+    padding: 4vh;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+.content, .content2{
+    height: 100%;
+}
+main{
+    height: calc(100% - 10vh - 8vh);
+    min-height: 20vh;
+}
+.content > div{
+    width: calc(100% / 4);
+    float: left;
+    display: block;
+    height: 100%;
+    min-height: 10vh;
+}
+.content  > div:nth-of-type(1){
+    background-color: #fff;
+    color: #4c40ff;
+    list-style-image: url(icons/star_dark_min.png);
+}
+.content  > div:nth-of-type(2){
+    background-color: #a0a6ff;
+    color: #4c40ff;
+    list-style-image: url(icons/star_dark_min.png);
+}
+.content  > div:nth-of-type(3){
+    background-color: rgb(112, 115, 255);
+    color: #cdd1ff;
+    list-style-image: url(icons/star_white_min.png);
+}
+.content  > div:nth-of-type(4){
+    background-color: #4c40ff;
+    color: #cdd1ff;
+    list-style-image: url(icons/star_white_min.png);
+}
+.title{
+    text-align: center;
+    font-size: 3.5vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    font-weight: 600;
+}
+.icon{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.icon img{
+    width: 3vh;
+}
+.list{
+    margin: 0 5vh;
+}
+footer{
+    border-top: #1100ff 2vh solid;
+    height: 6vh;
+    padding: 2vh 0;
+    background-image: url(doodles.png);
+}
+footer  > div:nth-of-type(1), footer div:nth-of-type(1) img, footer div:nth-of-type(3), footer div:nth-of-type(3) img{
+    width: 5vh;
+    height: 5vh;
+}
+footer  > div:nth-of-type(1){
+    float: left;
+}
+footer >  div:nth-of-type(3){
+    float: right;
+}
+footer  > div:nth-of-type(2){
+    float: left;
+    text-align: center;
+    width: calc(100% - 10vh);
+    line-height: 5vh;
+    color: #1100ff;
+    font-weight: 600;
+}
+.back_text{
+    color: #000;
+}
+
+
+
+.small_frame{
+    width: calc(100% / 2);
+    height: calc(100% / 3);
+    float: left;
+}
+.small_frame > div{
+    width: calc(100% - 4vh - 2px);
+    height: calc(100% - 4vh - 2px);
+    margin: 2vh;
+    border: #fff solid 1px;
+}
+.small_frame:nth-of-type(2), .small_frame:nth-of-type(3){
+    background-color: #cacdff;
+}
+.small_frame:nth-of-type(2) > div, .small_frame:nth-of-type(3) > div{
+    border: #fff solid 1px;
+    background-color: #cacdff;
+}
+.big_frame{
+    width: calc(100%);
+    background-color: #cacdff;
+    height: calc(100% / 3);
+    float: left;
+}
+.big_frame > div{
+    width: calc(100% - 4vh - 2px);
+    height: calc(100% - 4vh - 2px);
+    margin: 2vh;
+    border: #fff solid 1px;
+    background-color: #cacdff;
+    text-align: center;
+}
+.title_box{
+    text-align: center;
+    width: 100%;
+    margin: 1vh 0;
+    color: #1100ff;
+}
+.input_01{
+    width: calc(100% / 2 - 2vh - 2px);
+    margin: 1vh;
+    border: #1100ff 1px solid;
+    float: left;
+    box-sizing: border-box;
+    height: 3vh;
+    background-color: #fff;
+}
+.input_02{
+    width: calc(100% / 6);
+    margin: 1vh;
+    border: #1100ff 1px solid;
+    float: left;
+    box-sizing: border-box;
+    height: 3vh;
+    background-color: #fff;
+}
+.button_01{
+    width: calc(100% / 4 - 2vh - 2px);
+    margin: 1vh;
+    border: #1100ff 1px solid;
+    float: left;
+    box-sizing: border-box;
+    height: 3vh;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #1100ff;
+}
+.button_03{
+    width: calc(100% / 4 - 2px);
+    margin: 1vh;
+    border: #1100ff 1px solid;
+    float: left;
+    box-sizing: border-box;
+    height: 3vh;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #1100ff;
+}
+.small_frame:nth-of-type(2)  div  .button_01, .small_frame:nth-of-type(4)  div  .button_01{
+    margin: 0 calc(50% - 2vh - 2px - 1vh);
+    display: block;
+}
+.wynik{
+    color: #1100ff;
+    float: left;
+    width: calc(100% - 2vh);
+    margin: 1vh;
+}
+.span_big{
+    color: #000;
+    float: left;
+    /* width: calc(100% - 2vh); */
+    margin: 1vh;
+}
+.rownanie{
+    width: 70%;
+    margin: 0 15%;
+}
+.x{
+    width: calc(100% / 4 - 2px);
+}
+.content2 input{
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    line-height: 3vh;
+}
+button:hover{
+    color: #a0a6ff;
+    background-color: #4c40ff;
+}
+.content2 input::placeholder{
+    font-size: 2vh;
+    text-transform: capitalize;
+    line-height: 3vh;
+}

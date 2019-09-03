@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gnerator liczb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main,
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #result {
+            width: calc(100% - 20px);
+            padding: 10px;
+        }
+
+        #result>div {
+            display: flex;
+            justify-content: center;
+        }
+
+        span {
+            padding: 10px;
+        }
+
+        .controlls_row label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .controlls_row p,
+        .controlls_row input {
+            line-height: 30px;
+            height: 30px;
+            box-sizing: border-box;
+        }
+
+        .controlls_row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Zgadywanka</h1>
+    </header>
+    <main>
+        <section id="controlls">
+            <div class="controlls_row">
+                <p>Zakres 0-10</p>
+            </div>
+            <div class="controlls_row">
+                <label>
+                    <input type="number" id="liczba1" value="1">
+                </label>
+                <button id="submit" >Zgadnij</button>
+            </div>
+        </section>
+        <section id="result">
+
+        </section>
+    </main>
+    <footer>
+        <p>Made by MDol</p>
+    </footer>
+</body>
+<script>
+    let liczby_wylosowane = [];
+    let random = null;
+    let szanse = 3;
+
+    function losowanie(){
+        let min = Math.ceil(0);
+        let max = Math.floor(10);
+        random = Math.floor(Math.random() * (max - min)) + min;
+        console.log(random);
+    }
+
+    losowanie();
+
+    document.getElementById("submit").addEventListener("click", () => {
+
+        if(szanse > 0){
+            let liczba1 = document.getElementById("liczba1").value;
+
+            let container = document.createElement("div");
+            let newSpan = document.createElement("span");
+
+            if (parseInt(liczba1) === random) {
+                // newSpan.innerHTML = "Brawo";
+                alert("Zgadłeś");
+                if(confirm("Czy chcesz grac dalej")){
+                    location.reload();
+                }else{
+                    location.replace("https://google.pl");
+                }
+            } else {
+                newSpan.innerHTML = "Nie zgadłeś ;(  "+liczba1+" "+(liczba1 > random ? ">" : "<")+" szukana";
+                szanse--;
+                if(szanse === 0){
+                    gameOver();
+                }
+
+            }
+            container.appendChild(newSpan);
+
+            document.getElementById("result").appendChild(container);
+        }else{
+            gameOver();
+        }
+
+    }, false);
+
+    function gameOver(){
+        alert("Game over");
+        location.reload();
+    }
+</script>
+
+</html>

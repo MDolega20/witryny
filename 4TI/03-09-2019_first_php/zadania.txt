@@ -1,0 +1,3 @@
+1. Napisz skrypt sprawdzajṗcy parzystoæ liczby.
+2. Napisz skrypt sprawdzajṗcy, czy moṡliwe jest zbudowanie trójkṗta z trzech odcinków o podanych dġugociach. Jeli tak, oblicz jego obwód i pole korzystajṗc ze wzoru Herona. 
+3. Napisaæ skrypt sprawdzajṗcy w której æwiartce ukġadu wspóġrzêdnych znajduje siê punkt o wspóġrzêdnych (a, b). Wywietl równieṡ odpowiedni komunikat, jeṡeli punkt znajduje siê na osi.

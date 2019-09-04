@@ -1,0 +1,5 @@
+1. Napisz skrypt sprawdzajṗcy poprawnoæ daty w formacie ddmmrrrr, zapisanej w jednej zmiennej typu caġkowitego (np. 24062019 = 24 czerwca 2019). Niepoprawna data to np. 341220038, 24252000. Do rozwiṗzania tego zadania uṡyj wyġṗcznie liczbowych typów danych. Dla uproszczenia przyjmij dwanacie miesiêcy, z których kaṡdy moṡe mieæ 31 dni.
+2. Napisz skrypt zgodny ze schematem zawartym w pliku 'zadanie2.jpg'.
+3. Napisz skrypt rozwiṗzujṗcy równanie kwadratowe.
+4. Napisz nowy przelicznik punktów na oceny dla przedmiotow zawodowych. Uwzglêdnij wartoci pomiêdzy przedziaġami i zastosuj odpowiednie zaokrṗglenie.
+5. Cena biletu PKS zaleṡy od dġugoci trasy wg. nastêpujṗcego schematu: za przejazdy od 0km do 10km pġaci siê 2 zġ, za przejazdy od 11 do 30km stawka wynosi 1 zġ plus 0,10 zġ za kaṡdy kilometr, za za przejazdy powyṡej 30km stawka wynosi 1 zġ plus 0,08 zġ za kaṡdy kilometr. Przy zaġoṡeniu, ṡe zmienna $k typu caġkowitego oznacza dġugoæ trasy w kilometrach, napisz skrypt wyznaczajṗcy wartoæ zmiennej $cena bêdṗcej kosztem zakupu biletu za przejazd k kilometrów. W przypadku nieprawidġowej wartoci k, $cena powinna siê równaæ -1.

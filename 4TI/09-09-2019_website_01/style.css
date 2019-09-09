@@ -96,10 +96,13 @@ nav>ul>li>a{
 #banner{
     background-image: url("https://i.etsystatic.com/13462380/r/il/74b511/1546019797/il_794xN.1546019797_rpzn.jpg");
     padding-top: 100px;
-    background-position: fixed;
+    background-attachment: fixed;
+    background-size: cover;
 }
 #desc-img{
     background-image: url("https://i.etsystatic.com/13462380/r/il/74b511/1546019797/il_794xN.1546019797_rpzn.jpg");
+/* background-attachment: fixed;
+background-size: cover; */
 }
 #desc-img:hover{
     filter: saturate(300%);
@@ -251,10 +254,15 @@ border-bottom: 1px solid rgba(51, 255, 0, 0.705);
 #form{
     background: rgba(51, 255, 0, 0.705);
 }
+#form .section{
+    padding-left: 10px;
+    padding-right: 0;
+}
 #form h4{
     color: #000;
     text-transform: uppercase;
     font-weight: 500;
+    text-align: center;
 }
 form{
     width: 180px;

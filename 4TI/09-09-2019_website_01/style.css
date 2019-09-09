@@ -5,6 +5,9 @@
 h3,h4,h5,p{
     font-weight: 300;
 }
+a:hover{
+    font-weight: 600;
+}
 body{
     font-family: -apple-system,
     BlinkMacSystemFont,
@@ -97,6 +100,9 @@ nav>ul>li>a{
 }
 #desc-img{
     background-image: url("https://i.etsystatic.com/13462380/r/il/74b511/1546019797/il_794xN.1546019797_rpzn.jpg");
+}
+#desc-img:hover{
+    filter: saturate(300%);
 }
 .simmilar-img{
     background-image: url("https://i.etsystatic.com/13462380/r/il/74b511/1546019797/il_794xN.1546019797_rpzn.jpg");
@@ -286,5 +292,8 @@ form>button{
     display: inline-block;
     margin: 0 40px;
     width: 100px;
-
+}
+#d-2 h5:hover,
+#d-2 p:hover {
+    font-weight: 600;
 }

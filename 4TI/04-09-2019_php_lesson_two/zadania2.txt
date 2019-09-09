@@ -1,5 +1,0 @@
-1. Napisz skrypt, który dla liczby naturalnej (maksymalnie szeœciocyfrowej) obliczy i wypisze sumê nieparzystych cyfr tej liczby oraz iloczyn niezerowych cyfr tej liczby.
-2. Napisz skrypt obliczaj¹cy sumê cyfr liczby naturalnej (maksymalnie szeœciocyfrowej) i wyœwietli otrzymany wynik, a nastêpnie powtórzy te dwie czynnoœci dla obliczonej sumy, itd. Ten proces powinien byæ zakoñczony, gdy obliczona suma cyfr bêdzie liczb¹ jednocyfrow¹, np. dla n=7895, nale¿y wyœwietliæ liczby: 29, 11, 2.
-3. Napisz skrypt, który obliczy i wyœwietli sumê n kolejnych liczb naturalnych (wiêkszych lub równych x i mniejszych od y) podzielnych przez 5 lub przez 3.
-4. Napisz skrypt, który dla dowolnej liczby n wypisuje na ekranie wszystkie liczby z przedzia³u [1, n] podzielne przez 7, których ostatnia cyfra to 1.
-5. Napisz skrypt, który obliczy sumê odwrotnoœci n kolejnych liczb.

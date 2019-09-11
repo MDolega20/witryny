@@ -1,0 +1,4 @@
+1. Napisz skrypt, który wypisze elementy tablicy, których wartoœæ mieœci siê w przedziale (5, 16].
+2. Napisz skrypt, który zwiêkszy ka¿dy element tablicy o wartoœæ elementu poprzedniego. Pierwszy element tablicy nale¿y pozostawiæ bez zmian. Nastêpnie wypisz elementy tablicy zaczynaj¹c od koñca.
+3. Napisz skrypt przetwarzaj¹cy tablicê (indeksowan¹) zawieraj¹c¹ liczby ca³kowite. Skrypt powinien zamieniæ ka¿d¹ nieparzyst¹ wartoœæ w tablicy na jej kwadrat. Liczby ujemne nale¿y zast¹piæ zerami, w oddzielnej tablicy przechowaæ numery indeksów takich elementów i na koniec wypisaæ. 
+4. Napisz skrypt, który znajdzie najmniejszy element w tablicy indeksowanej (zawieraj¹cej wy³¹cznie liczby), a nastêpnie zliczy ile razy ta wartoœæ wystêpuje w tablicy.

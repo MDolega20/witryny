@@ -1,0 +1,30 @@
+1. Stwórz tablicê asocjacyjnṗ, w której kluczami bêdṗ tytuġy filmów, a wartociami odpowiadajṗce im kategorie. Napisz skrypt, który zliczy filmy z kategorii SF i wywietli ich tytuġy.
+
+2. Stwórz tablicê asocjacyjnṗ, w której kluczami bêdṗ nazwy przedmiotów, a wartociami oceny koñcowe otrzymane przez ucznia X. Napisz skrypt, który wywietli nazwy przedmiotów pogrupowane wedġug otrzymanych ocen, np. 
+Przedmioty z ocenṗ 1:
+- Matematyka
+- Historia
+Przedmioty z ocenṗ 2:
+- Plastyka
+...
+  
+3. Stwórz tablicê asocjacyjnṗ, której kluczami bêdṗ nazwy miesiêcy, a wartociami rednie temperatury dla Polski. Napisz skrypt, który obliczy 
+- redniṗ temperaturê dla caġego roku, 
+- najniṡszṗ temperaturê dla caġego roku, 
+- najwyṡszṗ temperaturê wród miesiêcy letnich (czerwiec, lipiec, sierpieñ),
+- amplitudê temperatur dla caġego roku.
+
+4. Stwórz tablicê indeksowanṗ, której kaṡdy element to imiê i nazwisko ucznia oraz tablicê asocjacyjnṗ, której kluczami bêdṗ tytuġy ksiṗṡek, a wartociami indeksy uczniów, którzy wypoṡyczyli danṗ ksiṗṡkê. Ksiṗṡki aktualnie niewypoṡyczone majṗ wartoæ 0. Napisz skrypt, który znajdzie i wywietli tytuġy ksiṗṡek, które nie sṗ jeszcze wypoṡyczone oraz obliczy i wywietli imiê i nazwisko ucznia, który wypoṡyczyġ najwiêcej ksiṗṡek. W przypadku znalezienia kilku takich uczniów, proszê wypisaæ nazwiska ich wszystkich.
+
+5. Stwórz tablicê asocjacyjnṗ przechowujṗcṗ stan sprzêtu w szkole. Kluczami powinny byæ nazwy sprzêtów, a wartociami ich liczba na stanie, np.
+"myszka" => 158,
+"klawiatura => 123,
+"drukarka" => 10
+Nastêpnie napisz skrypt, który za pomocṗ pêtli przepisze klucze powyṡszej tablicy asocjacyjnej jako wartoci do nowej tablicy indeksowanej numerycznie. W efekcie powiniene otrzymaæ:
+0 => "myszka",
+1 => "klawiatura",
+2 => "drukarka"
+Na koniec za pomocṗ pêtli FOR i za porednictwem tablicy indeksowanej numerycznie, wypisz klucze i wartoci tablicy asocjacyjnej w formacie:
+myszka: 158
+klawiatura: 123
+drukarka: 10

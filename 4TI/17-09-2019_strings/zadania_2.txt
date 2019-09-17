@@ -1,0 +1,35 @@
+String 2
+
+1. W tablicy znajdujṗ siê kody produktów pewnego sklepu spoṡywczego:
+$produkty = ["P132" => "Chleb razowy ze sġonecznikiem", "N444" => "Sok pomarañczowy", "C561" => "Proszek do prania X", "PR223" => "Suszone truskawki", "PR226" => "Chrupki kukurydziane"];
+
+W drugiej tablicy znajdujṗ siê nazwy kategorii:
+$kategorie = ["Pieczywo", "Napoje", "Chemia gospodarcza", "Przekṗski"]
+Pierwszy znak symbolu kaṡdego produktu odpowiada pierwszej literze kategorii (z wyjṗtkiem kategorii Przekṗski, gdzie mamy do czynienia z dwoma znakami 'PR').
+
+Napisz skrypt, który wypisze produkty w nastêpujṗcej formie:
+Symbol / NAZWA PRODUKTU (Kategoria)
+np.
+P132 / CHLEB RAZOWY ZE S£ONECZNIKIEM (Pieczywo)
+
+Zwróæ uwagê, ṡe nazwy produktów w tablicy rozpoczynajṗ  siê wielkṗ literṗ, a wszystkie kolejne znaki sṗ maġe. W tekcie wypisywanym na stronie caġoæ powinna byæ zġoṡona z wielkich liter.
+
+
+2. Napisz skrypt cenzurujṗcy tekst zawarty w zmiennej $tekst.
+Utwórz tablicê $cenzura zawierajṗcṗ wyrazy niedozwolone:
+$cenzura = ["motyl", "brzydki", "ananas"];
+$tekst = "Moim ulubionym skġadnikiem pizzy jest ananas.";
+Efektem dziaġania skryptu powinno byæ wywietlenie tekstu, w którym wszystkie znaki wyrazów niedozwolonych, oprócz pierwszego i ostatniego, zostanṗ zastṗpione gwiazdkami.
+Wynik dla powyṡszego przykġadu:
+Moim ulubionym skġadnikiem pizzy jest a****s.
+
+
+3. Napisz skrypt, który z ciṗgu znaków $adres, bêdṗcego adresem HTTP utworzy odnonik HTML (znacznik <a>).
+
+
+3a. W zmiennej $adres zawrzyj wiele adresów oddzielonych od siebie znakiem rednika. Za pomocṗ odpowiedniej funkcji przeksztaġæ je w odrêbne elementy tablicy $adresy, a nastêpnie wywietl w kolejnych liniach. 
+Na koñcu wywietl liczbê wywietlonych linków. 
+
+
+4. Bez uṡycia funkcji substr_count() napisz skrypt, który bêdzie zliczaġ liczbê wystṗpieñ okrelonego ciṗgu znaków w tekcie.
+Np. Dla tekstu "Ala ma kota, a Kasia nie ma kota." i ciṗgu testujṗcego "kot" wynikiem powinno byæ 2.

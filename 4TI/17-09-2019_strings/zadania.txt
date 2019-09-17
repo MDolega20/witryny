@@ -1,0 +1,11 @@
+String 1
+
+1. Utwórz jeden ciṗg znaków, w którym umiecisz swoje imiê i nazwisko (oddzielone spacjṗ). Napisz skrypt, który zamieni je miejscami.
+
+2. Utwórz dwa ciṗgi znaków. Napisz skrypt, który sprawdzi na których pozycjach litery sṗ takie same (wywietl literê i numer pozycji).
+
+3. Napisz skrypt, który usunie z tekstu "Dawno, dawno temu, za górami, za lasami..." wszystkie przecinki.
+
+4. Napisz skrypt, który dla tekstu zawartego w zmiennej $tekst wstawi przed kaṡdṗ spacjṗ znak *.
+
+5. Utwórz skrypt, który sprawdzi, czy dane sġowo jest palindromem. Palindromem nazywamy sġowo, które czytane "od lewej do prawej" i "od prawej do lewej" jest takie samo, np. kajak.

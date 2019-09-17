@@ -79,7 +79,11 @@ foreach ($noUsers as $key => $value) {
     echo "- " . $value . "\n";
 }
 echo "Najlepsi użytkownicy: " . "\n";
+$i = false;
 foreach ($users2 as $key => $value) {
-    if(count($value) > 3)
+    if($i === false) {
+        $i = true;
         echo "- " . $key . " - " . count($value) . " books\n";
+
+    }
 }

@@ -1,0 +1,21 @@
+1. Napisz funkcjê suma() przyjmujṗca dwa parametry. Funkcja powinna sprawdziæ, czy przekazane wartoci sṗ liczbami i dodaæ je. Na koniec powinna wypisaæ wynik w formie a + b = c i dodatowo zwróciæ wynik.
+
+2. Napisz funkcjê roznica() analogicznṗ do funkcji suma().
+
+3. Napisz funkcjê iloczyn() analogicznṗ do funkcji suma().
+
+4. Napisz funkcjê iloraz() analogicznṗ do funkcji suma(). Nie dopuæ do dzielenia przez zero.
+
+5. Napisz funkcjê potega(), która dla podanych liczb: x i n obliczy wartoæ x^n. Nie uṡywaj do tego celu operatora ** ani wbudowanych funkcji potêgujṗcych. 
+Podstawa potêgi to liczba rzeczywista, wykġadnik potêgi to liczba naturalna lub zero (naleṡy to sprawdziæ przed wykonaniem potêgowania).
+
+6. Napisz funkcjê wywietl(), która przyjmuje 4 parametry: liczba1, liczba2, wynik i dziaġanie. Funkcja ta bêdzie odpowiadaæ za wywietlanie wyników w poprzednich funkcjach, w formie wynik w formie: "liczba1 dziaġanie liczba2 = wynik", np. 4 / 2 = 2.
+Podmieñ instrukcje echo w funkcjach suma(), roznica(), iloczyn(), iloraz() i potega() na wywoġanie funkcji wyswietl().
+
+7. Napisz funkcjê, która dla podanej liczby naturalnej n i znaku x wyswietla kwadrat o boku n zġozony z podanego znaku. Naleṡy sprawdziæ, czy n>0 oraz czy x to pojedynczy znak. Jeli dane sṗ poprawne i uda siê wywietliæ kwadrat, zwróæ wartoæ 1, w przeciwnym wypadku zwróæ -1.
+
+8. Napisz funkcjê, która sprawdzi, czy liczba przekazana jako parametr jest liczbṗ Armstronga. Jeli tak, zwróæ true, jeli nie, zwróæ false.
+
+9. Napisz funkcjê, która w przekazanej jako parametr tablicy znajdzie i zwróci wartoæ najmniejszṗ.
+
+10. Napisz wġasnṗ trzyparametrowṗ funkcjê substr().

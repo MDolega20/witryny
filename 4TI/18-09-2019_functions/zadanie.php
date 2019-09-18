@@ -92,13 +92,48 @@ function squere($n, $x)
         return -1;
     }
 }
-function sort_this($array){
+function armstrong_number($number)
+{
+    if (is_numeric($number)) {
+        $numers = str_split($number);
+        $length = count($numers);
+        $t = 0;
+        foreach ($numers as $key => $value) {
+            $s = $value;
+            for ($i = 1; $i < $length; $i++) {
+                $s *= $value;
+            }
+            $t += $s;
+        }
+        if($number === $t){
+            return true;
+        }else{
+            return false;
+        }
+    } else {
+        echo "error\n";
+    }
+}
+function sort_this($array)
+{
     print_r($array);
     $x = sort($array);
     print_r($x);
     // return reverse(sort($array));
 }
+function substr_2($string, $startIndex, $length){
+    $arr = str_split($string);
+    $arr2 = "";
+
+    for ($i=$startIndex; $i < $startIndex+$length; $i++) { 
+        $arr2 = $arr2 . $arr[$i];
+    }
+
+    return $arr2;
+}
 
 //test
-// squere(7, "O");
-sort_this([15,6,7,8,4444]);
+// squere(10, "O");
+// sort_this([15, 6, 7, 8, 4444]);
+// echo armstrong_number(153);
+echo substr_2("elo320", 2, 2) . "\n";

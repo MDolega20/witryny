@@ -105,9 +105,9 @@ function armstrong_number($number)
             }
             $t += $s;
         }
-        if($number === $t){
+        if ($number === $t) {
             return true;
-        }else{
+        } else {
             return false;
         }
     } else {
@@ -121,19 +121,40 @@ function sort_this($array)
     print_r($x);
     // return reverse(sort($array));
 }
-function substr_2($string, $startIndex, $length){
+function substr_2($string, $startIndex, $length)
+{
     $arr = str_split($string);
     $arr2 = "";
 
-    for ($i=$startIndex; $i < $startIndex+$length; $i++) { 
+    for ($i = $startIndex; $i < $startIndex + $length; $i++) {
         $arr2 = $arr2 . $arr[$i];
     }
 
     return $arr2;
+}
+function wydajReszte($kwotaDoZaplaty, $kwotaWplacona)
+{
+    $nominaly = [100, 50, 20, 10, 5, 2, 1];
+    $result = "";
+
+    if ($kwotaWplacona > $kwotaDoZaplaty) {
+        $reszta = $kwotaWplacona - $kwotaDoZaplaty;
+        foreach ($nominaly as $key => $value) {
+            if ($reszta / $value >= 1) {
+                for ($i = 0; $i <= $reszta / $value; $i++) {
+                    $reszta = $reszta - $value;
+                    $result = $result . $value . " ";
+                }
+            }
+        }
+        echo $result . "\n";
+    }
+
 }
 
 //test
 // squere(10, "O");
 // sort_this([15, 6, 7, 8, 4444]);
 // echo armstrong_number(153);
-echo substr_2("elo320", 2, 2) . "\n";
+// echo substr_2("elo320", 2, 2) . "\n";
+wydajReszte(57, 100);

@@ -19,3 +19,13 @@ Podmieñ instrukcje echo w funkcjach suma(), roznica(), iloczyn(), iloraz() i po
 9. Napisz funkcjê, która w przekazanej jako parametr tablicy znajdzie i zwróci wartoæ najmniejszṗ.
 
 10. Napisz wġasnṗ trzyparametrowṗ funkcjê substr().
+
+11. Napisz funkcjê wydajReszte(kwotaDoZaplaty, kwotaWplacona).
+W funkcji zdefiniuj tablicê bêdṗcṗ zbiorem dostêpnych nominaġów, np.
+$nominaly = [100, 50, 20, 10, 5, 2, 1];
+Na podstawie dostêpnych nominaġów funkcja powinna wywietliæ listê jak najmniejszej liczby banknotów i monet, które naleṡy wydaæ jako reszta.
+
+Przykġad: 
+Twoje zakupy wyniosġy 57 zġ (kwotaDoZaplaty). Zapġaciġe jednym banknotem stuzġotowym (kwotaWplacona). 
+Wywoġanie: wydajReszte(57, 100);
+Wynik: 20, 20, 2, 1

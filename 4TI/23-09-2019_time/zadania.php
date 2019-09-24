@@ -143,6 +143,22 @@ function check_loading_time(){
     $duration = $time2 - $time;
     echo $duration . " seconds\n";
 }
+function data8()
+{
+    echo "<br>";
+    $n = 4;
+    $x = 3;
+    $tn = [1, $x];
+    for ($i = 2; $i < $n; $i++) {
+        $tnm2 = $tn[0];
+        $tnm1 = $tn[1];
+        $tnc = 2 * $x * $tnm1 - $tnm2;
+        $tn[0] = $tn[1];
+        $tn[1] = $tnc;
+    }
+    echo $tn[1] . "<br>";
+}
+
 
 //test
 // date_in_polish();
@@ -150,4 +166,4 @@ function check_loading_time(){
 // echo days_to_end_of_this_year();
 // intercalary();
 // timestamp_to_format(1569305341);
-check_loading_time();
+// check_loading_time();

@@ -1,0 +1,8 @@
+Stwórz witrynê internetowṗ dla pizzerii. 
+Powinna zawieraæ nastêpujṗce podstrony/sekcje:
+- o pizzerii (np. krótki opis, zdjêcia pracowników...)
+- menu (nazwy, skġadniki, ceny, rozmiary itd.)
+- formularz zamówienia
+- poglṗd stanu zamówienia (na razie formularz umoṡliwiajṗcy wprowadzenie numeru telefonu i numeru zamówienia)
+- dane kontaktowe pizzerii
+

@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "SF Pro Text",
+    "Myriad Set Pro",
+    "SF Pro Icons",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    sans-serif;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+footer {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+#header{
+    width: 800px;
+    margin: 0 auto; 
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer{
+    width: 800px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav{
+    display: block;
+}
+ul{
+    list-style: none;
+   display: flex;
+   flex-direction: row;
+}
+li{
+
+}
+a{
+    display: block;
+    padding: 10px 15px;
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+#header > #logo, #footer>#logo{
+
+}
+#header>#logo>span, #footer>#logo>span {
+    /* temporary */
+    color: #fff;
+    display: block;
+}
+#header>#logo>span,
+#footer>#logo>span {
+    background: #000;/* temporary */
+    height: 50px;
+    width: 50px;
+}
+#footer>p{
+    height: 50px;
+    line-height: 50px;
+}
+
+/* main */
+main{
+    margin: 0 auto;
+    width: 800px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+section{
+    margin-bottom: 15px;
+}
+section>h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+section>p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+section>p:nth-last-of-type(1){
+    margin-bottom: 0;
+}
+.workers{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.workers>.worker{
+    display: flex;
+    flex-direction: column;
+}
+.workers> .worker > img {
+    display: block;
+    padding: 20px;
+    border-radius: 100%;
+}

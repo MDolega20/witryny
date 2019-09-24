@@ -1,6 +1,6 @@
 Data i czas
 
-1. Napisz funkcjê, która wywietli aktualnṗ datê z miesiṗcem wyraṡonym sġownie w jêzyku polskim, np. 23 wrzenia 2019. 
+1. Napisz funkcjê, która wywietli aktualnṗ datê z miesiṗcem wyraṡonym sġownie w jêzyku polskim, np. 23 wrzenia 2019.
 
 2. Napisz funkcjê, która zwróci liczbê dni dzielṗcṗ dwie daty przekazane jako parametry typu string w formacie DD-MM-RRRR.
 
@@ -17,3 +17,16 @@ Rano: "Jak dobrze wstaæ!" (bġêkitne tġo, granatowy tekst)
 Dzieñ: "Dzieñ dobry :)" (jasnozielone tġo, fioletowy tekst)
 Popoġudnie: "Jak Ci mija dzieñ?" (pomarañczowe tġo, czarny tekst)
 Wieczór: "Dobry wieczór." (granatowe tġo, biaġy tekst)
+
+8. Napisz funkcjê obliczajṗcṗ wartoæ Tn(x) wielomianu Czebyszewa, dla okrelonego n i punktu x.
+
+9. Napisz funkcjê realizujṗcṗ algorytm sortowania bṗbelkowego na tablicy indeksowanej numerycznie zawierajṗcej liczby caġkowite. Nie uṡywaj wbudowanych funkcji sortujṗcych.
+
+10. Napisz funkcjê realizujṗcṗ iloczyn skalarny dwóch wektorów. Parametry funkcji to kṗt miêdzy wektorami i dwie tablice definiujṗce wektory, np.:
+$alpha = 30; //wartoæ wyraṡona w stopniach!
+$a = [2, -1]; 
+$b = [4, 3]; 
+
+Wskazówki: 
+Iloczyn skalarny jest równy iloczynowi dġugoci dwóch wektorów i cosinusa kṗta miêdzy nimi.
+Dġugoæ wektora to pierwiastek z sumy jego wspóġrzêdnych podniesionych do kwadratu.

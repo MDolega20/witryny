@@ -101,8 +101,17 @@ section>h2{
     font-weight: 500;
     margin-bottom: 15px;
 }
+section h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.frst {
+    margin-top: 15px;
+    margin-bottom: none !important;
+}
 section>p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 10px;
 }
@@ -125,4 +134,45 @@ section>p:nth-last-of-type(1){
     display: block;
     padding: 20px;
     border-radius: 100%;
+}
+
+table{
+    width: 100%;
+    font-size: 14px;
+}
+table tr{
+
+}
+table tr>th{
+    text-transform: uppercase;
+    font-weight: 500px;
+}
+table tr>th>td{
+    padding: 5px;
+}
+table tr>td:nth-of-type(1){
+
+}
+table tr>td:nth-of-type(1)>p {
+
+}
+table tr>td:nth-of-type(1)>p:nth-of-type(1) {
+    font-weight: 500px;
+}
+.pizza_name {
+    font-weight: 500px;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+form > input{
+    width: calc(100% / 3 - 30px);
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
 }

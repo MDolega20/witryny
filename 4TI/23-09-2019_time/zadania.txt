@@ -1,0 +1,19 @@
+Data i czas
+
+1. Napisz funkcjê, która wywietli aktualnṗ datê z miesiṗcem wyraṡonym sġownie w jêzyku polskim, np. 23 wrzenia 2019. 
+
+2. Napisz funkcjê, która zwróci liczbê dni dzielṗcṗ dwie daty przekazane jako parametry typu string w formacie DD-MM-RRRR.
+
+3. Napisz funkcjê, która zwróci liczbê dni pozostaġych do koñca roku.
+
+4. Napisz funkcjê, która wywietli dziesiêæ najbliṡszych lat przestêpnych. Np. 2020, 2024, 2028, 2032... 
+
+5. Napisz wġasnṗ funkcjê, która z przekazanego znacznika czasu wyznaczy datê w formacie DD.MM.RRRR. W tym zadaniu nie wykorzystuj gotowych funkcji.
+
+6. Napisz skrypt, który zbada czas ġadowania strony. W tym celu zapoznaj siê i uṡyj funkcji microtime().
+
+7. Napisz skrypt wywietlajṗcy innṗ zawartoæ strony w zaleṡnoci od pory dnia. 
+Rano: "Jak dobrze wstaæ!" (bġêkitne tġo, granatowy tekst)
+Dzieñ: "Dzieñ dobry :)" (jasnozielone tġo, fioletowy tekst)
+Popoġudnie: "Jak Ci mija dzieñ?" (pomarañczowe tġo, czarny tekst)
+Wieczór: "Dobry wieczór." (granatowe tġo, biaġy tekst)

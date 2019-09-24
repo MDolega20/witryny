@@ -87,6 +87,53 @@ function timestamp_to_format($timestamp){
     $miliseconds = $timestamp;
     echo $years . " " . $days . "\n";
 }
+function data4()
+{
+    echo "<br>";
+    $year = 2019;
+    for ($i = 1; $i <= 10;) {
+        if (($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0) {
+            echo $year . "<br>";
+            $i++;
+        }
+        $year++;
+    }
+}
+function data5($time)
+{
+    echo "<br>";
+    $time2 = ceil($time / (60 * 60 * 24));
+    $leapYear = [];
+    $monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    for ($year = 1970;; $year++) {
+        if (($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0) {
+            array_push($leapYear, $year);
+            if ($time2 <= 366) {
+                $monthDays[1] = 29;
+                break;
+            } else {
+                $time2 -= 366;
+            }
+        } else {
+            if ($time2 <= 365) {
+                break;
+            } else {
+                $time2 -= 365;
+            }
+        }
+    }
+
+    $month = 0;
+    foreach ($monthDays as $days) {
+        $month++;
+        if ($time2 <= $days) {
+            break;
+        } else {
+            $time2 -= $days;
+        }
+    }
+    echo $time2 . "." . $month . "." . $year;
+}
 function check_loading_time(){
     $time; $time2;
     $time = microtime(true);
@@ -96,7 +143,6 @@ function check_loading_time(){
     $duration = $time2 - $time;
     echo $duration . " seconds\n";
 }
-
 
 //test
 // date_in_polish();

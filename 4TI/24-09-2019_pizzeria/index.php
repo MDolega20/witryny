@@ -39,7 +39,7 @@
             <section name="menu">
                 <h2>Menu</h2>
                 <div id="menu">
-                    <?php include "menu.html" ?>
+                    <?php include "menu.php" ?>
                 </div>
             </section>
             <section name="kontakt">

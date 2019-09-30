@@ -28,13 +28,12 @@ foreach ($ordersQuery as $key => $value) {
     $price = $value["price"];
     $state = $value["state_name"];
     
-    $itemsQueryString = "SELECT item_id, items.name from items left join orders_items oi on items.id = oi.item_id where oi.order_id = $order_id;";
+    $itemsQueryString = "SELECT item_id, items.name, w.name as worker_name, w.first_name as worker_first_name, s.id as state_id, s.name as state_name from items left join orders_items oi on items.id = oi.item_id left join workers w on oi.worker_id = w.id left join states s on oi.state_id = s.id where oi.order_id = $order_id;";
     $itemsQuery = $pdo->query($itemsQueryString)->fetchAll(PDO::FETCH_ASSOC);
     
     echo "<div class=\"row_order\">";
     echo "
     <div class=\"row_order_top\">
-                        <div>$order_id</div>
                         <div>$date_time</div>
                         <div>$tel</div>
                         <div>$street_number</div>
@@ -49,7 +48,11 @@ foreach ($ordersQuery as $key => $value) {
     <p>Składniki</p><ol>";
     foreach ($itemsQuery as $key => $value) {
         $name = $value["name"];
-        echo "<li>$name</li>";
+        $w_f_name = $value["worker_first_name"];
+        $w_name = $value["worker_name"];
+        $state = $value["state_name"];
+
+        echo "<li>$name - $w_f_name $w_name - $state</li>";
     }
     echo "</ol></div>";
     echo "</div>";

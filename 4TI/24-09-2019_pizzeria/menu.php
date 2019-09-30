@@ -19,61 +19,49 @@ foreach ($categoryQuery as $key1 => $value_c) {
 }
 
 // print_r($categoryQuery);
-// generate html for menu
 
-$html = "<div id=\"menu\">";
+// <div class="menu__table">
+//                         <div class="menu__table__name">
+//                             <h4>Pizze</h4>
+//                         </div>
+//                         <div class="menu__table__row__top">
+//                             <div>nazwa</div><div>cena [pln]</div>
+//                         </div>
+//                         <div class="menu__table__row">
+//                             <div>
+//                                 <p>pepperoni</p>
+//                                 <p>ser, salami</p>
+//                             </div>
+//                             <div>17</div>
+//                         </div>
+//                     </div>
+
+echo "<div class=\"menu\">";
 
 foreach ($categoryQuery as $key => $value_c) {
-    $categoryDiv = "<div class=\"menu--category\">";
+    echo "<div class=\"menu__table\">";
     $categoryName = $categoryQuery[$key]["name"];
-    $categoryHeader = "<h3>$categoryName</h3>";
+    echo "<div class=\"menu__table__name\"><h4>$categoryName</h4></div>";
 
-    $table = "<table>";
-
-    $topRow = "<tr>
-            <th>Rozmiar</th>
-            <th>30 cm</th>
-        </tr>";
-
-    $html = $html . $categoryDiv . $categoryHeader . $table . $topRow;
-
-    // print_r($value_c["items"]);
+    echo "<div class=\"menu__table__row__top\"><div>nazwa</div><div>cena [pln]</div></div>";
 
     foreach ($value_c["items"] as $key => $value_i) {
         $itemName = $value_i["name"];
         $itemPrice = $value_i["price"];
 
-        $components = "<p>";
-
-        for ($i=0; $i <= count($value_i["components"]); $i++) { 
+    echo "<div class=\"menu__table__row\"><div><p>$itemName</p><p>";
+            $components = "";
+        for ($i = 0; $i <= count($value_i["components"]); $i++) {
             $components = $components . $value_i["components"][$i]["name"];
 
-            if($i < count($value_i["components"]) - 1){
+            if ($i < count($value_i["components"]) - 1) {
                 $components = $components . ", ";
             }
         }
-        $componentsEnd = "</p>";
-        $components = $components . $componentsEnd;
 
-
-        $rowItem = "<tr>
-            <td><p class=\"pizza_name\">$itemName</p>$components</td>
-            <td></td>
-        </tr>";
-
-        $html = $html . $rowItem;
+    echo $components . "</p></div><div><p>$itemPrice</p></div></div>";
     }
-
-    $tableEnd = "</table>";
-
-    $categoryDivEnd = "</div>";
-    $html = $html . $tableEnd . $categoryDivEnd;
-
 }
-
-$htmlEnd = "</div>";
-$html = $html . $htmlEnd;
-
-echo $html;
+echo "</div>";
 
 // print_r($categoryQuery);

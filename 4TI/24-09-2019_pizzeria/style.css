@@ -110,6 +110,11 @@ a {
     height: 50px;
     width: 50px;
 }
+#logo>img {
+    height: 50px;
+    width: 50px;
+
+}
 
 #footer>p {
     height: 50px;

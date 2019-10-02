@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include_once "header.html";?>
+    <?php include_once "header_menagment.html";?>
     <main>
-        <section>
+        <section id="workers">
             <h2>Pracownicy</h2>
             <div class="workers table">
                 <div class="workers__row workers__row__top">
@@ -115,7 +115,7 @@ foreach ($rulesQuery as $key => $value) {
     </div>
             </div>
         </section>
-        <section>
+        <section id="components">
             <h2>Składniki</h2>
             <div class="components table">
                 <div class="components__row components__row__top">
@@ -177,7 +177,7 @@ foreach ($componentsQuery as $key => $value) {
 </div>
             </div>
         </section>
-        <section>
+        <section id="products">
             <h2>Produkty</h2>
             <div class="products table">
                 <div class="products__row components__row__top">

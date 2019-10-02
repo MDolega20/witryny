@@ -1,0 +1,7 @@
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (1, 'ciasto', 10, 'Plastyczna i elastyczna masa powstała przez zagniecenie mąki, wody i innych składników, np. cukru, jajek, tłuszczów.', 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (2, 'sos', 2, null, 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (3, 'ser', 1, 'Produkt spożywczy wytwarzany poprzez wytrącenie z mleka tłuszczu i białka w postaci skrzepu, który zostaje poddany dalszej obróbce. Istnieje wiele gatunków sera i dzieli się je np. ze względu na gatunek mleka, zawartość tłuszczu, konsystencję, proces produkcyjny i czas dojrzewania. Ser zawiera wiele składników odżywczych. Technologią produkcji serów zajmuje się serowarstwo.', 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (4, 'pieczarki', 5, 'Rodzaj grzybów należący do rodziny pieczarkowatych (Agaricaceae)[1]. Uprawiany i sprzedawany w sklepach jest jeden z jej gatunków – pieczarka dwuzarodnikowa.', 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (5, 'makaron', 5, null, 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (6, 'śmietana', 4, null, 0);
+INSERT INTO pizzeria.components (id, name, price, description, `delete`) VALUES (7, 'rukula', 5, 'opis rukoli', 0);

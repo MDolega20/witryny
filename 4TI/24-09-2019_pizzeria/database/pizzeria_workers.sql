@@ -1,0 +1,4 @@
+INSERT INTO pizzeria.workers (id, first_name, name, pesel, tel, email, rule_id, active, `delete`) VALUES (1, 'Michael', 'Chicoine', '72111236724', '608-844-0408', 'MichaelLChicoine@dayrep.com', 1, 1, 0);
+INSERT INTO pizzeria.workers (id, first_name, name, pesel, tel, email, rule_id, active, `delete`) VALUES (2, 'Julia', 'Urbina', '76111296724', '53 482 62 17', 'JuliaSUrbina@rhyta.com', 2, 1, 0);
+INSERT INTO pizzeria.workers (id, first_name, name, pesel, tel, email, rule_id, active, `delete`) VALUES (3, 'Bryan', 'Wood', '78082817278', '60 800 78 97', 'BryanDWood@armyspy.com', 3, 1, 0);
+INSERT INTO pizzeria.workers (id, first_name, name, pesel, tel, email, rule_id, active, `delete`) VALUES (5, 'Olaf', 'Budzisz', '19271001270', '698003261', 'olafdestroyer@vp.pl', 2, 1, 1);

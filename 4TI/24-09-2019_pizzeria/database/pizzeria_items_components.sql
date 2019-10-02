@@ -1,0 +1,10 @@
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (1, 1, 1);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (2, 1, 2);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (3, 1, 3);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (4, 2, 1);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (5, 2, 2);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (6, 2, 3);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (7, 2, 4);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (8, 7, 5);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (9, 7, 6);
+INSERT INTO pizzeria.items_components (id, item_id, component_id) VALUES (10, 9, 7);

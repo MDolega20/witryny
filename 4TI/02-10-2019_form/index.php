@@ -38,10 +38,11 @@
             <label><input type="checkbox" name="hobby[]" checked value="hobby_topic_3">hooby topic 3</label></br>
             <label><input type="checkbox" name="hobby[]" checked value="hobby_topic_4">hooby topic 4</label></br>
             <h3>Color</h3>
-            <input type="color" name="color">
+            <input type="color" name="color" value="#FFFFFF">
             <h3>Fav fruits</h3>
             <label>
             <select name="fruits[]" multiple>
+                <option disable>- choose fruit -</option>
                 <option value="fruit_name_1">fruit name</option>
                 <option value="fruit_name_2">fruit name</option>
                 <option value="fruit_name_3">fruit name</option>

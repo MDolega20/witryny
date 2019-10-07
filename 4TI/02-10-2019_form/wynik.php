@@ -1,3 +1,8 @@
+<html>
+<head>
+    <title>RESPONSE</title>
+</head>
+<body>
 <?php
     // first_name
     // last_name
@@ -13,6 +18,23 @@
     // fruit_name_1
     // note
 
-    // echo $_GET[""] . "\n";
-    print_r($_POST);
+    $color_2 = "RGB(" . $_GET["color_2"][0] . "," . $_GET["color_2"][1] . "," . $_GET["color_2"][2] . ")";
+
+    echo "<style>";
+    echo "body{";
+    echo "background-color: " . $_GET["color"] . ";";
+    echo "color: " . $color_2 . ";";
+    echo "}";
+    echo "</style>";
+
+
+    if($_GET["gender"] === "man"){
+        echo "<img src=\"./man.png\" height=\"50px\"/>";
+    }elseif($_GET["gender"] === "woman"){
+        echo "<img src=\"./woman.png\" height=\"50px\" />";
+    }
+        
+    print_r($_GET);
 ?>
+</body>
+</html>

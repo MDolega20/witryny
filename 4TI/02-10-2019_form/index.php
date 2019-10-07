@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <title>Forms</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .flex_col{
+            display: flex;
+            flex-direction: column;
+        }
+        .flex_col > input{
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-    <form action="wynik.php" method="post">
+    <form action="wynik.php" method="GET">
         <fieldset>
             <legend>Info</legend>
             <label><input type="text" name="first_name" placeholder="first name" value="Olaf"></label>
@@ -38,7 +47,12 @@
             <label><input type="checkbox" name="hobby[]" checked value="hobby_topic_3">hooby topic 3</label></br>
             <label><input type="checkbox" name="hobby[]" checked value="hobby_topic_4">hooby topic 4</label></br>
             <h3>Color</h3>
-            <input type="color" name="color" value="#FFFFFF">
+            <input type="color" name="color" value="#EEEEEE">
+            <div class="flex_col">
+            <label><span>R</span><input type="range" name="color_2[]" min="0" max="255"></label>
+            <label><span>G</span><input type="range" name="color_2[]" min="0" max="255"></label>
+            <label><span>B</span><input type="range" name="color_2[]" min="0" max="255"></label>
+            </div>
             <h3>Fav fruits</h3>
             <label>
             <select name="fruits[]" multiple>

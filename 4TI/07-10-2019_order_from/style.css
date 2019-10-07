@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0 auto;
+}
+
+#login{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: calc(150px + 20px);
+}
+#login>fieldset {
+    display: block;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#login>fieldset>input{
+    margin-bottom: 10px;
+}
+#login>fieldset>input:nth-last-of-type(1){
+    margin-bottom: 0;
+}

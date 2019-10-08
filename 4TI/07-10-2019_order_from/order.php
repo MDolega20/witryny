@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Order</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,5 +11,6 @@
             echo "<h1>Zalogowano</h1>";
         }
     ?>
+    <?php include "order_form.php" ?>
 </body>
 </html>

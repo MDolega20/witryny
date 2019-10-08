@@ -15,6 +15,18 @@
                     "karma sucha razer",
                     "130"
                 ],
+                [
+                    "obroża",
+                    "50"
+                ],
+                [
+                    "obroża pro",
+                    "90"
+                ],
+                [
+                    "obroża razer",
+                    "190"
+                ],
             ];
             foreach ($products as $key => $value) {
                 echo "<label><input type=\"checkbox\" name=\"products[" . $key . "][name]\" value=\"" . $value[0] . "\" checked/>";

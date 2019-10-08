@@ -38,7 +38,8 @@ for ($i = 0; $i < Count($_POST["products"]); $i++) {
         $shipment = 10;
         $sum += $shipment;
     }
-
+    $sum = Round($sum * 100) / 100;
+    $rabat = Round($rabat * 100) / 100;
 }
 
 echo "<div class=\"summary-row summary-row-discount\">";

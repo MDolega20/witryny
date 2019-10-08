@@ -9,8 +9,8 @@
     <form action="order.php" method="post" id="login">
         <fieldset>
             <legend>Logowanie</legend>
-            <input type="text" name="login" placeholder="LOGIN" value="admin">
-            <input type="password" name="password" placeholder="PASSWORD" value="admin">
+            <input type="text" name="login" placeholder="LOGIN" value="admin" requied>
+            <input type="password" name="password" placeholder="PASSWORD" value="admin" requied>
             <input type="submit" value="Zaloguj się">
         </fieldset>
     </form>

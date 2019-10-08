@@ -13,8 +13,8 @@
 $sum = 0;
 $rabat = 0;
 
-for ($i = 0; $i < Count($_GET["products"]); $i++) {
-    $product = $_GET["products"][$i];
+for ($i = 0; $i < Count($_POST["products"]); $i++) {
+    $product = $_POST["products"][$i];
     
     if (isset($product["name"])) {
         $sum += $product["price"];
@@ -32,7 +32,7 @@ for ($i = 0; $i < Count($_GET["products"]); $i++) {
         $rabat = $sum * 0.1;
         $sum -= $rabat;
     }
-    if($_GET["shipment"] !== "kurier"){
+    if($_POST["shipment"] !== "kurier"){
         $shipment = 0;
     }else{
         $shipment = 10;
@@ -48,7 +48,7 @@ echo "<div>" . ($rabat) . "PLN</div>";
 echo "</div>";
 echo "<div class=\"summary-row\">";
 echo "<div></div>";
-echo "<div>" . $_GET["shipment"] . "</div>";
+echo "<div>" . $_POST["shipment"] . "</div>";
 echo "<div>" . ($shipment) . "PLN</div>";
 echo "</div>";
 echo "<div class=\"summary-row\">";
@@ -57,7 +57,6 @@ echo "<div>łącznie do zapłaty</div>";
 echo "<div>" . $sum . "PLN</div>";
 echo "</div>";
 
-print_r($_GET);
 ?>
 
     </div>

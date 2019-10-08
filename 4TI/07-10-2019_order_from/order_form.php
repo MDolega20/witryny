@@ -1,4 +1,4 @@
-<form action="summary.php" method="get" class="products" id="order">
+<form action="summary.php" method="post" class="products" id="order">
     <fieldset>
         <legend>Zamówienie</legend>
         <?php 
@@ -24,7 +24,6 @@
             echo "<hr>";
             echo "<label><input type=\"radio\" name=\"shipment\" value=\"odbiór osobisty\"/><p>odbiór osobisty</p></label>";
             echo "<label><input type=\"radio\" name=\"shipment\" value=\"kurier\" checked/><p>kurier</p></label>";
-
         ?>
     <input type="submit" value="Zatwierdź">
     </fieldset>

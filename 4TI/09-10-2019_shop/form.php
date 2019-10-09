@@ -1,25 +1,9 @@
-<?php 
-
-if (isset($_POST["min"]) && !empty($_POST["min"])) {
-    $min = $_POST["min"];
-}else{
-    $min = null;
-}
-
-if (isset($_POST["max"]) && !empty($_POST["max"])) {
-    $max = $_POST["max"];
-}else{
-    $max = null;
-}
-
-echo "<form method=\"post\" id=\"form-price\"><label><span>od:</span><input type=\"number\" name=\"min\" value=\"" . $min . "\"></label>"."<label><span>do:</span><input type=\"number\" name=\"max\" value=\"" . $max . "\"></label><input type=\"submit\" value=\"Przefiltruj\">
-</form>";
-
-
-?>
-
-<!-- <form method="post" id="form-price">
-    <label><span>od:</span><input type="number" name="min"></label>
-    <label><span>do:</span><input type="number" name="max"></label>
+<form method="post" id="form-price">
+    <label><span>od:</span><input type="number" name="min" value="<?php echo $_POST["min"]; ?>"></label>
+    <label><span>do:</span><input type="number" name="max" value="<?php echo $_POST["max"]; ?>"></label>
     <input type="submit" value="Przefiltruj">
-</form> -->
+</form>
+<form method="post" id="form-search">
+    <label><input type="text" name="product_name" value="<?php echo $_POST["product_name"]; ?>"></label>
+    <input type="submit" value="Szukaj">
+</form>

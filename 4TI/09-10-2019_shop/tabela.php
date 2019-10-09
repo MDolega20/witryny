@@ -6,12 +6,14 @@ if(isset($_POST["min"]) && !empty($_POST["min"]))
     $min = $_POST["min"];
 if(isset($_POST["max"]) && !empty($_POST["max"]))
     $max = $_POST["max"];
+if(isset($_POST["product_name"]) && !empty($_POST["product_name"]))
+    $product_name = $_POST["product_name"];
 
 $polaczenie = mysqli_connect('localhost', 'mateusz', '123', 'sklep_spożywczy');
 
 if ($polaczenie) {
     $query = "SELECT * FROM produkty";
-    if(isset($min) || isset($max)){
+    if(isset($min) || isset($max) || isset($product_name)){
         $query = $query . " WHERE ";
         if(isset($min)){
             $query = $query . " cena > " . $min;
@@ -19,7 +21,10 @@ if ($polaczenie) {
         if(isset($max)){
             $query = $query . (isset($min) ? " AND" : "") . " cena < " . $max;
         }
-        $query = $query . " ORDER BY cena";
+        if(isset($product_name)){
+            $query = $query . (isset($min) || isset($max) ? " AND" : "") . " nazwa LIKE \"%" . $product_name . "%\"";
+        }
+        // $query = $query . " ORDER BY cena";
     }
 
     $wynik = mysqli_query($polaczenie, $query);

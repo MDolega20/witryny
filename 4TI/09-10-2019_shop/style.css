@@ -1,10 +1,10 @@
 table, td, th{
     border: 1px solid #000;
 }
-#form-price{
+form{
     margin-bottom: 10px;
 }
-#form-price input{
+form input{
     display: inline-block;
     margin-right: 5px;
     padding: 5px;

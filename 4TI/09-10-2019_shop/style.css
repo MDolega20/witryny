@@ -1,0 +1,12 @@
+table, td, th{
+    border: 1px solid #000;
+}
+#form-price{
+    margin-bottom: 10px;
+}
+#form-price input{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    min-width: 10px;
+}

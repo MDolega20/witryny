@@ -261,22 +261,27 @@ table tr>td:nth-of-type(2) {
     flex-direction: column;
 }
 
+.workers__row>form,
 .workers__row {
     display: grid;
-    grid-template-columns: 90px 100px 100px 120px 120px auto 60px;
+    grid-template-columns: 90px 100px 100px 120px 120px 210px 60px;
 }
 
-.components__row {
+.components__row,
+.components__row > form {
     display: grid;
-    grid-template-columns: 90px auto 150px 400px;
+    grid-template-columns: 90px 160px 150px 400px;
 }
 
-.products__row {
+.products__row, 
+.products__row > form {
     display: grid;
-    grid-template-columns: 90px 100px 130px 90px auto 200px;
+    grid-template-columns: 90px 100px 130px 90px 190px 200px;
 }
 
-.table_row>div {
+.table_row>div,
+.table_row>form>div
+    {
     padding: 3px;
     overflow: hidden;
 }

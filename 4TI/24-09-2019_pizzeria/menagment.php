@@ -23,10 +23,11 @@
             <?php
 $pdo = new PDO('mysql:host=localhost;dbname=pizzeria;charset=utf8mb4;collection=utf8mb4_unicode_ci', 'mateusz', '123'); // officjal config
 
-$workersQueryString = "SELECT workers.first_name, workers.name, workers.pesel, workers.tel, workers.email, r.name as rule from workers left join rules r on workers.rule_id = r.id WHERE workers.delete = false;";
+$workersQueryString = "SELECT workers.id, workers.first_name, workers.name, workers.pesel, workers.tel, workers.email, r.name as rule from workers left join rules r on workers.rule_id = r.id WHERE workers.delete = false;";
 $workersQuery = $pdo->query($workersQueryString)->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($workersQuery as $key => $value) {
+    $id = $value["id"];
     $name = $value["name"];
     $first_name = $value["first_name"];
     $tel = $value["tel"];
@@ -37,8 +38,11 @@ foreach ($workersQuery as $key => $value) {
     echo "
                     <div class=\"workers__row table_row\">
                     <div class=\"table_row_del\">
-                        <button>Delete</button>
-                        <button>Edit</button>
+                        <form method=\"post\" action=\"delete_row.php\">
+                            <input name=\"item_id\" value=\"$id\" type=\"hidden\" />
+                            <input name=\"item_table\" value=\"workers\" type=\"hidden\" />
+                            <input type=\"submit\" value=\"Delete\" />
+                        </form>
                     </div>
                     <div>
                     $first_name
@@ -64,8 +68,10 @@ foreach ($workersQuery as $key => $value) {
 
 ?>
     <div class="workers__row table_row">
+        <form action="add_row.php" method="post">
+            <input type="hidden" name="table" value="workers">
         <div>
-            <button>Add</button>
+            <input type="submit" value="Add">
         </div>
         <div>
             <label>
@@ -112,6 +118,7 @@ foreach ($rulesQuery as $key => $value) {
                 </select>
             </label>
         </div>
+        </form>
     </div>
             </div>
         </section>
@@ -127,19 +134,23 @@ foreach ($rulesQuery as $key => $value) {
                             <?php
 $pdo = new PDO('mysql:host=localhost;dbname=pizzeria;charset=utf8mb4;collection=utf8mb4_unicode_ci', 'mateusz', '123'); // officjal config
 
-$componentsQueryString = "SELECT * from components";
+$componentsQueryString = "SELECT * from components where `delete` = false";
 $componentsQuery = $pdo->query($componentsQueryString)->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($componentsQuery as $key => $value) {
+    $id = $value["id"];
     $name = $value["name"];
     $price = $value["price"];
-    $describtion = $value["description"];
+    $description = $value["description"];
 
     echo "
                     <div class=\"components__row table_row\">
                     <div class=\"table_row_del\">
-                        <button>Delete</button>
-                        <button>Edit</button>
+                        <form method=\"post\" action=\"delete_row.php\">
+                            <input name=\"item_id\" value=\"$id\" type=\"hidden\" />
+                            <input name=\"item_table\" value=\"components\" type=\"hidden\" />
+                            <input type=\"submit\" value=\"Delete\" />
+                        </form>
                     </div>
                     <div>
                     $name
@@ -148,7 +159,7 @@ foreach ($componentsQuery as $key => $value) {
                     $price
                     </div>
                     <div>
-                    $describtion
+                    $description
                     </div>
                 </div>
                     ";
@@ -156,24 +167,27 @@ foreach ($componentsQuery as $key => $value) {
 
 ?>
 <div class="table_row components__row">
-    <div>
-        <button>Add</button>
-    </div>
-    <div>
-        <label>
-            <input type="text" placeholder="name" name="name">
-        </label>
-    </div>
-    <div>
-        <label>
-            <input type="number" placeholder="price" name="price">
-        </label>
-    </div>
-    <div>
-        <label>
-            <input type="text" placeholder="describtion" name="describtion">
-        </label>
-    </div>
+    <form action="add_row.php" method="post">
+            <input type="hidden" name="table" value="components">
+        <div>
+            <input type="submit" value="Add">
+        </div>
+        <div>
+            <label>
+                <input type="text" placeholder="name" name="name">
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="number" placeholder="price" name="price">
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="text" placeholder="description" name="description">
+            </label>
+        </div>
+    </form>
 </div>
             </div>
         </section>
@@ -191,7 +205,7 @@ foreach ($componentsQuery as $key => $value) {
                                             <?php
 $pdo = new PDO('mysql:host=localhost;dbname=pizzeria;charset=utf8mb4;collection=utf8mb4_unicode_ci', 'mateusz', '123'); // officjal config
 
-$itemsQueryString = "SELECT items.id, items.name, items.price, items.description, c.name as category from items left join category c on items.category_id = c.id;";
+$itemsQueryString = "SELECT items.id, items.name, items.price, items.description, c.name as category from items left join category c on items.category_id = c.id WHERE items.`delete` = false;";
 $itemsQuery = $pdo->query($itemsQueryString)->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($itemsQuery as $key => $value) {
@@ -207,16 +221,20 @@ foreach ($itemsQuery as $key => $value) {
             $components = $components . ", ";
         }
     }
+    $id = $value["id"];
     $name = $value["name"];
     $price = $value["price"];
-    $describtion = $value["description"];
+    $description = $value["description"];
     $category = $value["category"];
 
     echo "
                     <div class=\"products__row table_row\">
                     <div class=\"table_row_del\">
-                        <button>Delete</button>
-                        <button>Edit</button>
+                        <form method=\"post\" action=\"delete_row.php\">
+                            <input name=\"item_id\" value=\"$id\" type=\"hidden\" />
+                            <input name=\"item_table\" value=\"items\" type=\"hidden\" />
+                            <input type=\"submit\" value=\"Delete\" />
+                        </form>
                     </div>
                     <div>
                     $category
@@ -231,7 +249,7 @@ foreach ($itemsQuery as $key => $value) {
                     $components
                     </div>
                     <div>
-                    $describtion
+                    $description
                     </div>
                 </div>
                     ";
@@ -239,16 +257,18 @@ foreach ($itemsQuery as $key => $value) {
 
 ?>
 <div class="table_row products__row">
+    <form action="add_row.php" method="post">
+            <input type="hidden" name="table" value="items">
     <div>
-        <button>Add</button>
+            <input type="submit" value="Add">
     </div>
     <div>
         <label>
-                <select name="rule">
+                <select name="category">
         <?php
 $pdo = new PDO('mysql:host=localhost;dbname=pizzeria;charset=utf8mb4;collection=utf8mb4_unicode_ci', 'mateusz', '123'); // officjal config
 
-$categoryQueryString = "SELECT * FROM category";
+$categoryQueryString = "SELECT * FROM category where `delete` = false";
 $categoryQuery = $pdo->query($categoryQueryString)->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($categoryQuery as $key => $value) {
@@ -272,12 +292,12 @@ foreach ($categoryQuery as $key => $value) {
     </div>
     <div>
         <label>
-            <input type="text" placeholder="components" name="components">
+            <input type="text" placeholder="components (oddzielone przecinkami)" name="components">
         </label>
     </div>
     <div>
         <label>
-            <input type="text" placeholder="describtion" name="describtion">
+            <input type="text" placeholder="description" name="description">
         </label>
     </div>
 </div>

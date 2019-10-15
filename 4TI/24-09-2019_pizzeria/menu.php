@@ -7,12 +7,12 @@ $categoryQuery = $pdo->query($categoryQueryString)->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($categoryQuery as $key1 => $value_c) {
     $idCategory = $value_c["id"];
-    $itemsQueryString = "SELECT * FROM items where category_id=$idCategory";
+    $itemsQueryString = "SELECT * FROM items where category_id=$idCategory and `delete` = 0";
     $itemsQuery = $pdo->query($itemsQueryString)->fetchAll(PDO::FETCH_ASSOC);
     $categoryQuery[$key1]["items"] = $itemsQuery;
     foreach ($categoryQuery[$key1]["items"] as $key2 => $value_i) {
         $idItem = $value_i["id"];
-        $itemsQueryString = "SELECT c.id, c.name, c.description FROM items_components LEFT OUTER JOIN components c on items_components.component_id = c.id  where item_id=$idItem;";
+        $itemsQueryString = "SELECT c.id, c.name, c.description FROM items_components LEFT OUTER JOIN components c on items_components.component_id = c.id  where item_id=$idItem";
         $itemsQuery = $pdo->query($itemsQueryString)->fetchAll(PDO::FETCH_ASSOC);
         $categoryQuery[$key1]["items"][$key2]["components"] = $itemsQuery;
     }

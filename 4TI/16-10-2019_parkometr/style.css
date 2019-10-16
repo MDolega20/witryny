@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0 auto;
+    width: 100%;
+}
+#parkmetr{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px;
+}
+#parkmetr h1{
+    text-align: center;
+    margin: 10px 0;
+}
+#cennik{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+.cennik-row,
+.cennik-row-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cennik-row-header {
+    border-bottom: 1px solid #000;
+    font-weight: 600;
+}
+.cennik-row p,
+.cennik-row-header p{
+    padding: 2px 4px;
+}
+.cennik-row p:nth-of-type(2):after{
+    content: "zł";
+}
+#money_input{
+
+}
+#money_output{
+
+}
+#controls{
+
+}
+#ticket{
+    
+}

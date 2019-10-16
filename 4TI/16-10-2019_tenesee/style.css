@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+h1 {
+    font-family: 'Arvo', serif;
+}
+h3 {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#banner{
+    background: url("https://livability.com/sites/default/files/Smoky-Mountains-TN.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.banner,
+nav,
+section {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.banner {
+    background: rgba(255, 197, 120, 0.507);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+}
+.banner-links {
+    display: flex;
+    flex-direction: row;
+}
+.banner-text h1{
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.banner-text h2 {
+    line-height: 20px;
+}
+.banner-links a{
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.486);
+    margin-left: 15px;
+}
+.banner-links a:nth-of-type(1) {
+    margin-left: 0;
+}
+nav{
+    background: #000;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.nav-item a{
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+.nav-item:nth-of-type(1) a{
+    padding-left: 0;
+}
+h3{
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+section{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+#miasta{
+    background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+#miasta h3 {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.miasta-obrazki,
+.info-row,
+.jezyki-row {
+    display: flex;
+    flex-direction: row;
+}
+.miasta-obrazki img,
+.miasta-obrazki > div{
+    width: calc(100% / 4 - 10px);
+    padding: 0 5px;
+}
+.info-row{
+    justify-content: center;
+}
+.info-row-item{
+    padding: 0 30px;
+}
+.info-row-item p{
+    text-align: center;
+}
+.info-row-item p:nth-of-type(1){
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.info-row-item p:nth-of-type(1):after{
+    content: ":";
+}
+.jezyki-row-item{
+    width: calc(100% / 2 - 0.5%);
+    display: flex;
+    flex-direction: row;
+}
+.jezyki-row-item:nth-of-type(1){
+    border-right: 1px solid #000;
+}
+.jezyki-row-item-column {
+    display: flex;
+    flex-direction: column;
+}
+.jezyki-row-item-column:nth-of-type(1){
+    width: 100px;
+}
+.jezyki-row-item-column:nth-of-type(2){
+    width: calc(100% - 100px);
+}
+.jezyki-row-item-column>div {
+    height: 50px;
+}
+.jezyki-row-item-column:nth-of-type(2) > div:nth-of-type(1){
+    background-color: red;
+    width: 93.78%;
+}
+.jezyki-row-item-column:nth-of-type(2) > div:nth-of-type(2){
+    background-color: blue;
+    width: 2.66%;
+}

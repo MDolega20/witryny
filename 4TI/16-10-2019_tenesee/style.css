@@ -93,6 +93,7 @@ h3{
 section{
     padding-top: 20px;
     padding-bottom: 15px;
+    padding-left: 150px !important;
 }
 #miasta{
     background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
@@ -103,12 +104,17 @@ section{
 }
 .miasta-obrazki,
 .info-row,
-.jezyki-row {
+.jezyki-row,
+.gospodarka_row {
     display: flex;
     flex-direction: row;
 }
-.miasta-obrazki img,
-.miasta-obrazki > div{
+.miasta-obrazki img{
+    width: calc(100% / 4 - 20px);
+    padding: 0 10px;
+}
+/* TODO dont work */
+.miasta-obrazki:hover .miasta-obrazki img{ 
     width: calc(100% / 4 - 10px);
     padding: 0 5px;
 }
@@ -156,4 +162,47 @@ section{
 .jezyki-row-item-column:nth-of-type(2) > div:nth-of-type(2){
     background-color: blue;
     width: 2.66%;
+}
+.jezyki-row-item > p{
+    padding: 10px;
+}
+.gospodarka-row-item{
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.gospodarka-row-item p{
+    font-weight: 600;
+}
+.gospodarka-row-item ul {
+    list-style-position: inside;
+    padding: 5px;
+}
+#muzyka{
+    background: rgb(0, 30, 78);
+}
+#muzyka h3{
+    color: #fff;
+    border-color: #fff;
+}
+#muzyka p {
+    color: #fff;
+    text-indent: 10px;
+}
+#dodatkowe ul{
+    list-style-image: url("./img/star.png");
+}
+#zapisz_sie {
+    text-align: center;
+    padding-bottom: 30px;
+    background: rgb(146, 0, 0);
+    color: #fff;
+}
+#zapisz_sie h3 {
+    color: #fff;
+    border-color: #fff;
+}
+#zapisz_sie p{
+    margin-bottom: 10px;
 }

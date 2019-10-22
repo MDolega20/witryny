@@ -1,0 +1,4 @@
+select nazwa, potoczna from grzyby where jadalny = 1;
+select g.nazwa, g.potoczna, r.nazwa as rodzina from grzyby as g left join rodzina as r on g.rodzina_id = r.id left join potrawy as p on p.id = g.potrawy_id where p.nazwa = "sos"; 
+select potoczna, nazwa_pliku from grzyby;
+alter table rodzina add pole text null;

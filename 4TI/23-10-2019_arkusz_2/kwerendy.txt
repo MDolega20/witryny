@@ -1,0 +1,9 @@
+INSERT INTO filmy (id,gatunki_id,rezyserzy_id,tytul,rok,ocena) values (10,5,2,"Suburbicon",2017,5);
+SELECT f.tytul, g.nazwa FROM filmy as f LEFT JOIN gatunki as g ON f.gatunki_id = g.id WHERE f.ocena >= 6;
+SELECT f.tytul, f.rok FROM filmy as f WHERE f.ocena = 5;
+CREATE TABLE aktorzy
+(
+    id       int(10) primary key not null,
+    imie     text,
+    nazwisko text
+);

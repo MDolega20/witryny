@@ -10,10 +10,7 @@
         if ($connect) {
             $queryString = 'INSERT INTO filmy (id,gatunki_id,rezyserzy_id,tytul,rok,ocena) values (null,'.$_POST["gatunek"].',1,"'.$_POST["tytul"].'",'.$_POST["rok"].','.$_POST["ocena"].');';
             $query = mysqli_query($connect, $queryString);
-
-            // while ($row = mysqli_fetch_assoc($query)) {
-            //     echo "<li>" . $row["nazwa"] . " (" . $row["potoczna"] . "), rodzina: " . $row["rodzina"] . "</li>";
-            // }
+            
             echo "Film ".$_POST["tytul"]." został dodany do bazy";
 
             mysql_close($connect);

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja Meteo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="banner">
+    <h1>STACJA METEO</h1>
+   </div>
+   <main>
+    <div id="left">
+        <h2>Dokumentacja wyników zapytań w bazie Meteo</h2>
+        <table>
+            <tr>
+                <td>
+                    <img src="./baza/kwi1.png" alt="kwerenda1">
+                </td><td>
+                    <img src="./baza/kwi2.png" alt="kwerenda2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./baza/kwi3.png" alt="kwerenda3">
+                </td><td>
+                    <img src="./baza/kwi4.png" alt="kwerenda4">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="right">
+        <h2>zamiana jednostek temperatury</h2>
+        <label>
+            <p>temperatura w <sup>O</sup> C:</p>
+            <input type="text" id="temp"> 
+        </label>
+        <label>
+            <p>Zamiana na:</p>
+            <div>
+                <button id="k">Kelwiny</button>
+                <button id="f">Fakrenheity</button>
+            </div>
+        </label>
+        <div id="wynik">
+
+        </div>
+        <h2>Do pobrania</h2>
+        <ul>
+            <li><a href="./baza/kwerendy.txt">Kwerendy</a></li>
+            <li>
+                <a href="./baza/meteo.sql">Eksport MySQL</a>
+            </li>
+        </ul>
+    </div>
+   </main>
+   <div id="footer">
+    <p>PESEL AUTORA STRONY: XXXXXXXXXXXX</p>
+   </div>
+</body>
+<script src="skrypt.js"></script>
+</html>

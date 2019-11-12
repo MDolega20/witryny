@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    background: #999999;
+}
+header h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    COLOR: #fff;
+    font-weight: 500;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.main-col{
+    min-height: 500px;
+}
+.main-col-left{
+    width: calc(100% - 70%);
+    background: #CCC;
+}
+.main-col-right{
+    width: calc(100% - 30%);
+}
+.main-col > section{
+    padding: 10px 15px;
+}
+.main-col > section > h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 500;
+}
+.main-col > section > p{
+    font-size: medium;
+}
+form{
+    text-align: center;
+    margin-top: 10px;
+}
+form > input, form > select{
+    padding: 5px;
+    box-sizing: border-box;
+    max-width: 100px;
+}
+form > input[type="submit"]{
+    text-transform: uppercase;
+    background: cornflowerblue;
+    color: #FFF;
+    border-color: cornflowerblue;
+}

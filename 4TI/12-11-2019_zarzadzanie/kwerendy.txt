@@ -1,0 +1,30 @@
+CREATE TABLE osoby(
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
+    imie varchar(100),
+    nazwisko varchar(100)
+);
+CREATE TABLE kategorie(
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
+    nazwa varchar(100)
+);
+CREATE TABLE priorytety(
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
+    nazwa varchar(100)
+);
+CREATE TABLE zadania(
+    nr_zadania int(11) PRIMARY KEY AUTO_INCREMENT,
+    nazwa_zadania varchar(100),
+    osoba_odpowiedzialna_FK int(11),
+    priorytet_FK int(11),
+    kategoria_FK int(11),
+    FOREIGN KEY (osoba_odpowiedzialna_FK) REFERENCES  osoby(id),
+    FOREIGN KEY (priorytet_FK) REFERENCES  priorytety(id),
+    FOREIGN KEY (kategoria_FK) REFERENCES  kategorie(id)
+);
+ALTER TABLE zadania ADD COLUMN zakonczone int(1);
+
+INSERT INTO kategorie (nazwa) VALUES ("programowanie"),("grafika");
+INSERT INTO osoby (imie, nazwisko) VALUES ("Olaf","Budzisz"), ("Aleksander","Budzisz"), ("Norbert","Budzisz"), ("Jakub","Budzisz"), ("Olaf","Konkol"), ("Jakub","Konkol");
+INSERT INTO priorytety (nazwa) VALUES ("wysoki"),("normalny"),("niski");
+INSERT INTO zadania (nazwa_zadania, osoba_odpowiedzialna_FK, priorytet_FK, kategoria_FK, zakonczone) VALUES ("Logowanie",1,1,1,0),("Projekt interfejsu",2,1,1,0);
+INSERT INTO zadania (nazwa_zadania, osoba_odpowiedzialna_FK, priorytet_FK, kategoria_FK, zakonczone) VALUES ("Makieta",3,1,1,1),("Zrobić kawę",1,2,1,1);

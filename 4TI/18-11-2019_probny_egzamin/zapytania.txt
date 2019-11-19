@@ -1,0 +1,4 @@
+zapytanie 1: SELECT f.id, f.tytul, s.data, s.godzina, s.cena_biletu  FROM `filmy` as f LEFT JOIN seanse as s ON s.film = f.id WHERE MONTH(s.data) = 11;
+zapytanie 2: UPDATE seanse SET sala = 3 WHERE sala = 5;
+zapytanie 3: SELECT s.data, MIN(s.`cena_biletu`) as cena FROM `seanse` as s GROUP BY s.data
+zapytanie 4: SELECT COUNT(f.id) as liczba FROM `gatunki` as g LEFT JOIN filmy as f on f.gatunek = g.id WHERE g.nazwa = "musical" GROUP by g.nazwa

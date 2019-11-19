@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#banner{}
+main{}
+#lewy{}
+#prawy{}
+#stopka{}
+#stopka_top{}
+#stopka_bottom{}
+
+body{
+    margin: 0 auto;
+
+    background: #00335a;
+    color: #FFF;
+    font-size: 16px;
+    font-family: Arial;
+}
+#banner{
+    height: 290px;
+    width: 100%;
+    background-image: url('cinema-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 2px solid orange;
+}
+main, form > div{
+    display: flex;
+    flex-direction: row;
+}
+#stopka, form{
+    display: flex;
+    flex-direction: column;
+}
+#lewy, #prawy, #stopka_top, #stopka_bottom{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#lewy{
+    width: 25%;
+}
+#prawy{
+    width: 75%;
+}
+#stopka_top{
+    height: 290px;
+    background-size: 100%;
+    background-image: url('cinema-footer.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#stopka_bottom{
+    text-align: left;
+    color: #999;
+}
+h2{
+    padding-bottom: 30px;
+    color: orange;
+}
+table{
+    width: 100%;
+}
+input[type="submit"], #b_sub{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFF;
+    background-color: orange;
+    border-radius: 5px;
+}
+input[type="submit"]:hover, #b_sub:hover{
+    background-color: cornflowerblue;
+}
+.plakat_top{
+    width: 50px;
+    margin-right: 20px;
+}
+.plakat_los{
+    width: 100%;
+}
+table tr td:nth-last-of-type(1) span{
+    margin-left: 10px;
+}

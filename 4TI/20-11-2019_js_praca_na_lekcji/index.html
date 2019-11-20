@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="z_1">
+        <p>Potegi liczby 2</p>
+        <label><input type="number" id="z_1_i"></label>
+        <button id="z_1_b">Oblicz</button>
+    </section>
+    <section>
+        <label><input type="text" id="z_2_i_1"></label>
+        <div>
+            <label>
+                <input type="radio" name="z_2_i_2" value="m">
+                <p>meszczyzna</p>
+            </label>
+            <label>
+                <input type="radio" name="z_2_i_2" value="k">
+                <p>kobieta</p>
+            </label>
+        </div>
+        <button id="z_2_b">Powitaj</button>
+        <div><p id="z_2_r"></p></div>
+    </section>
+    <section>
+        <p>Podaj wymiary zbiornika</p>
+        <img src="./JS_ćwiczenia/zbiornik.png" alt="zbiornik_png" id="z_3_b">
+        <label>
+            <p>x: </p>
+            <input type="number" id="z_3_i_1">
+            <p>m</p>
+        </label><label>
+            <p>y: </p>
+            <input type="number" id="z_3_i_2">
+            <p>m</p>
+        </label><label>
+            <p>z: </p>
+            <input type="number" id="z_3_i_3">
+            <p>m</p>
+        </label>
+        <div><p id="z_3_r"></p></div>
+    </section>
+    <section>
+        <div>
+            <label>
+                <select id="z_4_i_1">
+                    <option value="1">dlugopis</option>
+                    <option value="2">linijka</option>
+                    <option value="3">zeszyt w kratke</option>
+                </select>
+            </label>
+            <label>
+                <p>ilosc: </p>
+                <input type="number" id="z_4_i_2">
+            </label>
+            <button id="z_4_b">Dodaj</button>
+        </div>
+        <div id="z_4_r"></div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

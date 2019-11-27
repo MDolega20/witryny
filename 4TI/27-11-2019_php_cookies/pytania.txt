@@ -1,0 +1,14 @@
+1. Jaka funkcja s�u�y do utworzenia cookie?
+setcookie("yourcookie","yourvalue",time()-1);
+2. Jakie parametry przyjmuje ta funkcja, ile z nich jest opcjonalnych a ile wymaganych?
+setcookie("yourcookie","yourvalue");
+3. W jaki spos�b ustawi� cookie, kt�re wygasa za tydzie�?
+setcookie("yourcookie","yourvalue",time()+(1440*7));
+4. W jaki spos�b ustawi� cookie, kt�re wygasa przy zako�czeniu sesji?
+setcookie("yourcookie","yourvalue");
+5. W jaki spos�b odczyta� warto�� cookie?
+echo $_COOKIE["nazwa]
+6. W jaki spos�b sprawdzi�, czy dany cookie istnieje?
+isset($_COOKIE["nazwa])
+7. W jaki spos�b usun�� cookie?
+unset($_COOKIE["yourcookie"]);

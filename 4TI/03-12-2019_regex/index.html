@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = "81-130s",
+        r = /^\d\d-\d\d\d$/;
+
+        const test = (string) => {
+            if(r.test(string))
+                return true;
+            else
+                return false;
+        }
+        console.log(test(text));
+    </script>
+</body>
+</html>
